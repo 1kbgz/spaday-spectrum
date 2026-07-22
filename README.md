@@ -9,9 +9,6 @@
 
 ## Overview
 
-> [!NOTE]
-> This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
-
 `spaday-spectrum` provides generated Python bindings and a self-contained registration bundle for a
 focused first slice of Adobe Spectrum Web Components:
 
@@ -39,3 +36,6 @@ forms are `packages=[spaday_spectrum.package]` and `packages=["spaday_spectrum:p
 The first release pins the six individual Spectrum packages to `1.11.2`. It deliberately avoids the
 full `@spectrum-web-components/bundle`; more components should be added from concrete application needs
 and generated from their published Custom Elements Manifests.
+
+> [!NOTE]
+> This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
