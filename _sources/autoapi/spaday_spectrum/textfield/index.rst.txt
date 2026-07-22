@@ -1,0 +1,36 @@
+spaday_spectrum.textfield
+=========================
+
+.. py:module:: spaday_spectrum.textfield
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   spaday_spectrum.textfield.SpTextfield
+
+
+Module Contents
+---------------
+
+.. py:class:: SpTextfield(*children: spaday.component.Child, key: Optional[str] = None, value: Any = None, allowed_keys: Optional[str] = None, focused: Optional[bool] = None, invalid: Optional[bool] = None, label: Optional[str] = None, name: Optional[str] = None, placeholder: Optional[str] = None, type: Any = None, pattern: Optional[str] = None, grows: Optional[bool] = None, maxlength: Optional[float] = None, minlength: Optional[float] = None, multiline: Optional[bool] = None, readonly: Optional[bool] = None, rows: Optional[float] = None, valid: Optional[bool] = None, quiet: Optional[bool] = None, required: Optional[bool] = None, autocomplete: Any = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default").
+
+
+   .. py:attribute:: tag
+      :value: 'sp-textfield'
+
+
+

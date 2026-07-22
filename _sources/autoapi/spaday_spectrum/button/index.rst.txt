@@ -1,0 +1,76 @@
+spaday_spectrum.button
+======================
+
+.. py:module:: spaday_spectrum.button
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   spaday_spectrum.button.SpButton
+   spaday_spectrum.button.SpClearButton
+   spaday_spectrum.button.SpCloseButton
+
+
+Module Contents
+---------------
+
+.. py:class:: SpButton(*children: spaday.component.Child, key: Optional[str] = None, pending_label: Optional[str] = None, pending: Optional[bool] = None, variant: Any = None, static_color: Optional[Literal['black', 'white']] = None, treatment: Any = None, quiet: Optional[bool] = None, no_wrap: Optional[bool] = None, active: Optional[bool] = None, type: Optional[Literal['button', 'submit', 'reset']] = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default").
+
+
+   .. py:attribute:: tag
+      :value: 'sp-button'
+
+
+
+.. py:class:: SpClearButton(*children: spaday.component.Child, key: Optional[str] = None, label: Optional[str] = None, quiet: Optional[bool] = None, variant: Optional[Literal['overBackground']] = None, static_color: Optional[Literal['white']] = None, active: Optional[bool] = None, type: Optional[Literal['button', 'submit', 'reset']] = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default").
+
+
+   .. py:attribute:: tag
+      :value: 'sp-clear-button'
+
+
+
+.. py:class:: SpCloseButton(*children: spaday.component.Child, key: Optional[str] = None, variant: Any = None, static_color: Optional[Literal['black', 'white']] = None, active: Optional[bool] = None, type: Optional[Literal['button', 'submit', 'reset']] = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default").
+
+
+   .. py:attribute:: tag
+      :value: 'sp-close-button'
+
+
+

@@ -1,0 +1,36 @@
+spaday_spectrum.theme
+=====================
+
+.. py:module:: spaday_spectrum.theme
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   spaday_spectrum.theme.SpTheme
+
+
+Module Contents
+---------------
+
+.. py:class:: SpTheme(*children: spaday.component.Child, key: Optional[str] = None, color: Optional[Literal['lightest', 'light', 'dark', 'darkest', '']] = None, scale: Optional[Literal['medium', 'large', '']] = None, lang: Optional[str] = None, dir: Optional[Literal['ltr', 'rtl', '']] = None, system: Optional[Literal['spectrum', 'express']] = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default").
+
+
+   .. py:attribute:: tag
+      :value: 'sp-theme'
+
+
+

@@ -199,7 +199,15 @@
   <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="autoapi/index.html">API Reference</a><input aria-label="Toggle navigation of API Reference" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/test_all/index.html">test_all</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autoapi/spaday_spectrum/index.html">spaday_spectrum</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="autoapi/spaday_spectrum/index.html">spaday_spectrum</a><input aria-label="Toggle navigation of spaday_spectrum" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/button/index.html">spaday_spectrum.button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/checkbox/index.html">spaday_spectrum.checkbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/switch/index.html">spaday_spectrum.switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/tabs/index.html">spaday_spectrum.tabs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/textfield/index.html">spaday_spectrum.textfield</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/theme/index.html">spaday_spectrum.theme</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -251,9 +259,39 @@
 <a class="reference external" href="https://pypi.python.org/pypi/spaday-spectrum"><img alt="PyPI" src="https://img.shields.io/pypi/v/spaday-spectrum.svg" /></a></p>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This library was generated using <a class="reference external" href="https://copier.readthedocs.io/en/stable/">copier</a> from the <a class="reference external" href="https://github.com/python-project-templates/base">Base Python Project Template repository</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">spaday-spectrum</span></code> provides generated Python bindings and a self-contained registration bundle for a
+focused first slice of Adobe Spectrum Web Components:</p>
+<ul class="simple">
+<li><p>Theme</p></li>
+<li><p>Button, clear button, and close button</p></li>
+<li><p>Textfield</p></li>
+<li><p>Checkbox and switch</p></li>
+<li><p>Tabs, tab panels, and tabs overflow</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spaday.backends.starlette</span><span class="w"> </span><span class="kn">import</span> <span class="n">serve</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spaday_spectrum</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpButton</span><span class="p">,</span> <span class="n">SpTextfield</span><span class="p">,</span> <span class="n">SpTheme</span>
+
+<span class="n">page</span> <span class="o">=</span> <span class="n">SpTheme</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;light&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;medium&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">child</span><span class="p">(</span>
+    <span class="n">SpTextfield</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span><span class="p">),</span>
+    <span class="n">SpButton</span><span class="p">(</span><span class="n">treatment</span><span class="o">=</span><span class="s2">&quot;fill&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;Save&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">serve</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;spectrum&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Installing this project registers the <code class="docutils literal notranslate"><span class="pre">spectrum</span></code> entry point with spaday. The equivalent explicit
+forms are <code class="docutils literal notranslate"><span class="pre">packages=[spaday_spectrum.package]</span></code> and <code class="docutils literal notranslate"><span class="pre">packages=[&quot;spaday_spectrum:package&quot;]</span></code>.</p>
+<p>The first release pins the six individual Spectrum packages to <code class="docutils literal notranslate"><span class="pre">1.11.2</span></code>. It deliberately avoids the
+full <code class="docutils literal notranslate"><span class="pre">&#64;spectrum-web-components/bundle</span></code>; more components should be added from concrete application needs
+and generated from their published Custom Elements Manifests.</p>
+</section>
+<section id="development">
+<h2>Development<a class="headerlink" href="#development" title="Link to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>develop
+make<span class="w"> </span>build
+make<span class="w"> </span><span class="nb">test</span>
+make<span class="w"> </span>lint
+</pre></div>
 </div>
 </section>
 </section>

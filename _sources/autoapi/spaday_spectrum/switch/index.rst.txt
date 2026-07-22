@@ -1,0 +1,36 @@
+spaday_spectrum.switch
+======================
+
+.. py:module:: spaday_spectrum.switch
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   spaday_spectrum.switch.SpSwitch
+
+
+Module Contents
+---------------
+
+.. py:class:: SpSwitch(*children: spaday.component.Child, key: Optional[str] = None, emphasized: Optional[bool] = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default").
+
+
+   .. py:attribute:: tag
+      :value: 'sp-switch'
+
+
+

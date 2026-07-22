@@ -1,0 +1,96 @@
+spaday_spectrum.tabs
+====================
+
+.. py:module:: spaday_spectrum.tabs
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   spaday_spectrum.tabs.SpTab
+   spaday_spectrum.tabs.SpTabPanel
+   spaday_spectrum.tabs.SpTabs
+   spaday_spectrum.tabs.SpTabsOverflow
+
+
+Module Contents
+---------------
+
+.. py:class:: SpTab(*children: spaday.component.Child, key: Optional[str] = None, disabled: Optional[bool] = None, label: Optional[str] = None, selected: Optional[bool] = None, vertical: Optional[bool] = None, value: Optional[str] = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default").
+
+
+   .. py:attribute:: tag
+      :value: 'sp-tab'
+
+
+
+.. py:class:: SpTabPanel(*children: spaday.component.Child, key: Optional[str] = None, selected: Optional[bool] = None, value: Optional[str] = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default").
+
+
+   .. py:attribute:: tag
+      :value: 'sp-tab-panel'
+
+
+
+.. py:class:: SpTabs(*children: spaday.component.Child, key: Optional[str] = None, auto: Optional[bool] = None, compact: Optional[bool] = None, dir: Optional[Literal['ltr', 'rtl']] = None, direction: Optional[Literal['vertical', 'vertical-right', 'horizontal']] = None, emphasized: Optional[bool] = None, label: Optional[str] = None, enableTabsScroll: Optional[bool] = None, quiet: Optional[bool] = None, selected: Optional[str] = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default").
+
+
+   .. py:attribute:: tag
+      :value: 'sp-tabs'
+
+
+
+.. py:class:: SpTabsOverflow(*children: spaday.component.Child, key: Optional[str] = None, compact: Optional[bool] = None, label_previous: Optional[str] = None, label_next: Optional[str] = None, dir: Optional[Literal['ltr', 'rtl']] = None, **props: Any)
+
+   Bases: :py:obj:`spaday.component.Component`
+
+
+   Base for a node in the spaday component tree.
+
+   Author it two equivalent ways: nest children **positionally** in the constructor and set generic
+   props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
+   ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
+   ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
+   "leave the element's own default").
+
+
+   .. py:attribute:: tag
+      :value: 'sp-tabs-overflow'
+
+
+
