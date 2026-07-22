@@ -29,17 +29,36 @@ focused first slice of Adobe Spectrum Web Components:
 - Checkbox and switch
 - Tabs, tab panels, and tabs overflow
 
-```python
-from spaday.backends.starlette import serve
-from spaday_spectrum import SpButton, SpTextfield, SpTheme
+## Interactive example
 
-page = SpTheme(color="light", scale="medium").child(
-    SpTextfield(value="hello"),
-    SpButton(treatment="fill").text("Save"),
+The textfield updates the greeting immediately, the checkbox switches Spectrum themes, and the button
+resets state. All three interactions run in the browser through spaday's reactive store.
+
+```python
+from spaday import SetField, cond, element, field
+from spaday.backends.starlette import serve
+from spaday_spectrum import SpButton, SpCheckbox, SpTextfield, SpTheme
+
+page = (
+    SpTheme(scale="medium")
+    .compute("color", cond(field("dark"), "dark", "light"))
+    .style(display="block", max_width="32rem", margin="2rem auto", padding="1.5rem")
+    .child(element("h1").text("Spectrum profile"))
+    .child(SpTextfield(label="Display name", placeholder="Your name").bind("value", "name", mode="two-way"))
+    .child(SpCheckbox().text("Dark theme").bind("checked", "dark", mode="two-way"))
+    .child(
+        element("p")
+        .child("Hello, ")
+        .child(element("strong").bind("textContent", "name"))
+    )
+    .child(SpButton(treatment="fill").text("Reset name").on("click", SetField("name", "Ada")))
 )
 
-app = serve(page, packages=["spectrum"])
+app = serve(page, packages=["spectrum"], store={"name": "Ada", "dark": False})
 ```
+
+Save this as `app.py`, then run `pip install spaday-spectrum starlette uvicorn` and
+`uvicorn app:app`. Open <http://127.0.0.1:8000>.
 
 Installing this project registers the `spectrum` entry point with spaday. The equivalent explicit
 forms are `packages=[spaday_spectrum.package]` and `packages=["spaday_spectrum:package"]`.
@@ -48,11 +67,5 @@ The first release pins the six individual Spectrum packages to `1.11.2`. It deli
 full `@spectrum-web-components/bundle`; more components should be added from concrete application needs
 and generated from their published Custom Elements Manifests.
 
-## Development
-
-```bash
-make develop
-make build
-make test
-make lint
-```
+> [!NOTE]
+> This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
