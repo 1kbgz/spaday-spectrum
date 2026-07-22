@@ -39,13 +39,20 @@
     "test": "TZ=UTC playwright test",
     "watch": "nodemon --watch src -e ts,css,html --exec \"pnpm build:debug\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "@spectrum-web-components/button": "1.11.2",
+    "@spectrum-web-components/checkbox": "1.11.2",
+    "@spectrum-web-components/switch": "1.11.2",
+    "@spectrum-web-components/tabs": "1.11.2",
+    "@spectrum-web-components/textfield": "1.11.2",
+    "@spectrum-web-components/theme": "1.11.2"
+  },
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "cpy": "^13.2.2",
     "esbuild": "^0.28.0",
-    "lightningcss": "^1.29.3",
     "http-server": "^14.1.1",
+    "lightningcss": "^1.29.3",
     "nodemon": "^3.1.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.8.1",
