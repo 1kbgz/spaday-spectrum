@@ -37,11 +37,5 @@ The first release pins the six individual Spectrum packages to `1.11.2`. It deli
 full `@spectrum-web-components/bundle`; more components should be added from concrete application needs
 and generated from their published Custom Elements Manifests.
 
-## Development
-
-```bash
-make develop
-make build
-make test
-make lint
-```
+> [!NOTE]
+> This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
