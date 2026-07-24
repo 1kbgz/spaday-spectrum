@@ -15,7 +15,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: SpCheckbox(*children: spaday.component.Child, key: Optional[str] = None, disabled: Optional[bool] = None, indeterminate: Optional[bool] = None, invalid: Optional[bool] = None, emphasized: Optional[bool] = None, tabindex: Optional[float] = None, checked: Optional[bool] = None, name: Optional[str] = None, readonly: Optional[bool] = None, **props: Any)
+.. py:class:: SpCheckbox(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, indeterminate: bool | None = None, invalid: bool | None = None, emphasized: bool | None = None, tabindex: float | None = None, checked: bool | None = None, name: str | None = None, readonly: bool | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 

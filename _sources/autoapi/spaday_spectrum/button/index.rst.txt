@@ -17,7 +17,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: SpButton(*children: spaday.component.Child, key: Optional[str] = None, pending_label: Optional[str] = None, pending: Optional[bool] = None, variant: Any = None, static_color: Optional[Literal['black', 'white']] = None, treatment: Any = None, quiet: Optional[bool] = None, no_wrap: Optional[bool] = None, active: Optional[bool] = None, type: Optional[Literal['button', 'submit', 'reset']] = None, **props: Any)
+.. py:class:: SpButton(*children: spaday.component.Child, key: str | None = None, pending_label: str | None = None, pending: bool | None = None, variant: Any = None, static_color: Literal['black', 'white'] | None = None, treatment: Any = None, quiet: bool | None = None, no_wrap: bool | None = None, active: bool | None = None, type: Literal['button', 'submit', 'reset'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -36,7 +36,7 @@ Module Contents
 
 
 
-.. py:class:: SpClearButton(*children: spaday.component.Child, key: Optional[str] = None, label: Optional[str] = None, quiet: Optional[bool] = None, variant: Optional[Literal['overBackground']] = None, static_color: Optional[Literal['white']] = None, active: Optional[bool] = None, type: Optional[Literal['button', 'submit', 'reset']] = None, **props: Any)
+.. py:class:: SpClearButton(*children: spaday.component.Child, key: str | None = None, label: str | None = None, quiet: bool | None = None, variant: Literal['overBackground'] | None = None, static_color: Literal['white'] | None = None, active: bool | None = None, type: Literal['button', 'submit', 'reset'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -55,7 +55,7 @@ Module Contents
 
 
 
-.. py:class:: SpCloseButton(*children: spaday.component.Child, key: Optional[str] = None, variant: Any = None, static_color: Optional[Literal['black', 'white']] = None, active: Optional[bool] = None, type: Optional[Literal['button', 'submit', 'reset']] = None, **props: Any)
+.. py:class:: SpCloseButton(*children: spaday.component.Child, key: str | None = None, variant: Any = None, static_color: Literal['black', 'white'] | None = None, active: bool | None = None, type: Literal['button', 'submit', 'reset'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 

@@ -18,7 +18,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: SpTab(*children: spaday.component.Child, key: Optional[str] = None, disabled: Optional[bool] = None, label: Optional[str] = None, selected: Optional[bool] = None, vertical: Optional[bool] = None, value: Optional[str] = None, **props: Any)
+.. py:class:: SpTab(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, label: str | None = None, selected: bool | None = None, vertical: bool | None = None, value: str | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -37,7 +37,7 @@ Module Contents
 
 
 
-.. py:class:: SpTabPanel(*children: spaday.component.Child, key: Optional[str] = None, selected: Optional[bool] = None, value: Optional[str] = None, **props: Any)
+.. py:class:: SpTabPanel(*children: spaday.component.Child, key: str | None = None, selected: bool | None = None, value: str | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -56,7 +56,7 @@ Module Contents
 
 
 
-.. py:class:: SpTabs(*children: spaday.component.Child, key: Optional[str] = None, auto: Optional[bool] = None, compact: Optional[bool] = None, dir: Optional[Literal['ltr', 'rtl']] = None, direction: Optional[Literal['vertical', 'vertical-right', 'horizontal']] = None, emphasized: Optional[bool] = None, label: Optional[str] = None, enableTabsScroll: Optional[bool] = None, quiet: Optional[bool] = None, selected: Optional[str] = None, **props: Any)
+.. py:class:: SpTabs(*children: spaday.component.Child, key: str | None = None, auto: bool | None = None, compact: bool | None = None, dir: Literal['ltr', 'rtl'] | None = None, direction: Literal['vertical', 'vertical-right', 'horizontal'] | None = None, emphasized: bool | None = None, label: str | None = None, enableTabsScroll: bool | None = None, quiet: bool | None = None, selected: str | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -75,7 +75,7 @@ Module Contents
 
 
 
-.. py:class:: SpTabsOverflow(*children: spaday.component.Child, key: Optional[str] = None, compact: Optional[bool] = None, label_previous: Optional[str] = None, label_next: Optional[str] = None, dir: Optional[Literal['ltr', 'rtl']] = None, **props: Any)
+.. py:class:: SpTabsOverflow(*children: spaday.component.Child, key: str | None = None, compact: bool | None = None, label_previous: str | None = None, label_next: str | None = None, dir: Literal['ltr', 'rtl'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 

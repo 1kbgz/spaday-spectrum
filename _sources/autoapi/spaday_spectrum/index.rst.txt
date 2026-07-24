@@ -48,7 +48,7 @@ Classes
 Package Contents
 ----------------
 
-.. py:class:: SpButton(*children: spaday.component.Child, key: Optional[str] = None, pending_label: Optional[str] = None, pending: Optional[bool] = None, variant: Any = None, static_color: Optional[Literal['black', 'white']] = None, treatment: Any = None, quiet: Optional[bool] = None, no_wrap: Optional[bool] = None, active: Optional[bool] = None, type: Optional[Literal['button', 'submit', 'reset']] = None, **props: Any)
+.. py:class:: SpButton(*children: spaday.component.Child, key: str | None = None, pending_label: str | None = None, pending: bool | None = None, variant: Any = None, static_color: Literal['black', 'white'] | None = None, treatment: Any = None, quiet: bool | None = None, no_wrap: bool | None = None, active: bool | None = None, type: Literal['button', 'submit', 'reset'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -67,7 +67,7 @@ Package Contents
 
 
 
-.. py:class:: SpClearButton(*children: spaday.component.Child, key: Optional[str] = None, label: Optional[str] = None, quiet: Optional[bool] = None, variant: Optional[Literal['overBackground']] = None, static_color: Optional[Literal['white']] = None, active: Optional[bool] = None, type: Optional[Literal['button', 'submit', 'reset']] = None, **props: Any)
+.. py:class:: SpClearButton(*children: spaday.component.Child, key: str | None = None, label: str | None = None, quiet: bool | None = None, variant: Literal['overBackground'] | None = None, static_color: Literal['white'] | None = None, active: bool | None = None, type: Literal['button', 'submit', 'reset'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -86,7 +86,7 @@ Package Contents
 
 
 
-.. py:class:: SpCloseButton(*children: spaday.component.Child, key: Optional[str] = None, variant: Any = None, static_color: Optional[Literal['black', 'white']] = None, active: Optional[bool] = None, type: Optional[Literal['button', 'submit', 'reset']] = None, **props: Any)
+.. py:class:: SpCloseButton(*children: spaday.component.Child, key: str | None = None, variant: Any = None, static_color: Literal['black', 'white'] | None = None, active: bool | None = None, type: Literal['button', 'submit', 'reset'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -105,7 +105,7 @@ Package Contents
 
 
 
-.. py:class:: SpCheckbox(*children: spaday.component.Child, key: Optional[str] = None, disabled: Optional[bool] = None, indeterminate: Optional[bool] = None, invalid: Optional[bool] = None, emphasized: Optional[bool] = None, tabindex: Optional[float] = None, checked: Optional[bool] = None, name: Optional[str] = None, readonly: Optional[bool] = None, **props: Any)
+.. py:class:: SpCheckbox(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, indeterminate: bool | None = None, invalid: bool | None = None, emphasized: bool | None = None, tabindex: float | None = None, checked: bool | None = None, name: str | None = None, readonly: bool | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -124,7 +124,7 @@ Package Contents
 
 
 
-.. py:class:: SpSwitch(*children: spaday.component.Child, key: Optional[str] = None, emphasized: Optional[bool] = None, **props: Any)
+.. py:class:: SpSwitch(*children: spaday.component.Child, key: str | None = None, emphasized: bool | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -143,7 +143,7 @@ Package Contents
 
 
 
-.. py:class:: SpTab(*children: spaday.component.Child, key: Optional[str] = None, disabled: Optional[bool] = None, label: Optional[str] = None, selected: Optional[bool] = None, vertical: Optional[bool] = None, value: Optional[str] = None, **props: Any)
+.. py:class:: SpTab(*children: spaday.component.Child, key: str | None = None, disabled: bool | None = None, label: str | None = None, selected: bool | None = None, vertical: bool | None = None, value: str | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -162,7 +162,7 @@ Package Contents
 
 
 
-.. py:class:: SpTabPanel(*children: spaday.component.Child, key: Optional[str] = None, selected: Optional[bool] = None, value: Optional[str] = None, **props: Any)
+.. py:class:: SpTabPanel(*children: spaday.component.Child, key: str | None = None, selected: bool | None = None, value: str | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -181,7 +181,7 @@ Package Contents
 
 
 
-.. py:class:: SpTabs(*children: spaday.component.Child, key: Optional[str] = None, auto: Optional[bool] = None, compact: Optional[bool] = None, dir: Optional[Literal['ltr', 'rtl']] = None, direction: Optional[Literal['vertical', 'vertical-right', 'horizontal']] = None, emphasized: Optional[bool] = None, label: Optional[str] = None, enableTabsScroll: Optional[bool] = None, quiet: Optional[bool] = None, selected: Optional[str] = None, **props: Any)
+.. py:class:: SpTabs(*children: spaday.component.Child, key: str | None = None, auto: bool | None = None, compact: bool | None = None, dir: Literal['ltr', 'rtl'] | None = None, direction: Literal['vertical', 'vertical-right', 'horizontal'] | None = None, emphasized: bool | None = None, label: str | None = None, enableTabsScroll: bool | None = None, quiet: bool | None = None, selected: str | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -200,7 +200,7 @@ Package Contents
 
 
 
-.. py:class:: SpTabsOverflow(*children: spaday.component.Child, key: Optional[str] = None, compact: Optional[bool] = None, label_previous: Optional[str] = None, label_next: Optional[str] = None, dir: Optional[Literal['ltr', 'rtl']] = None, **props: Any)
+.. py:class:: SpTabsOverflow(*children: spaday.component.Child, key: str | None = None, compact: bool | None = None, label_previous: str | None = None, label_next: str | None = None, dir: Literal['ltr', 'rtl'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -219,7 +219,7 @@ Package Contents
 
 
 
-.. py:class:: SpTextfield(*children: spaday.component.Child, key: Optional[str] = None, value: Any = None, allowed_keys: Optional[str] = None, focused: Optional[bool] = None, invalid: Optional[bool] = None, label: Optional[str] = None, name: Optional[str] = None, placeholder: Optional[str] = None, type: Any = None, pattern: Optional[str] = None, grows: Optional[bool] = None, maxlength: Optional[float] = None, minlength: Optional[float] = None, multiline: Optional[bool] = None, readonly: Optional[bool] = None, rows: Optional[float] = None, valid: Optional[bool] = None, quiet: Optional[bool] = None, required: Optional[bool] = None, autocomplete: Any = None, **props: Any)
+.. py:class:: SpTextfield(*children: spaday.component.Child, key: str | None = None, value: Any = None, allowed_keys: str | None = None, focused: bool | None = None, invalid: bool | None = None, label: str | None = None, name: str | None = None, placeholder: str | None = None, type: Any = None, pattern: str | None = None, grows: bool | None = None, maxlength: float | None = None, minlength: float | None = None, multiline: bool | None = None, readonly: bool | None = None, rows: float | None = None, valid: bool | None = None, quiet: bool | None = None, required: bool | None = None, autocomplete: Any = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -238,7 +238,7 @@ Package Contents
 
 
 
-.. py:class:: SpTheme(*children: spaday.component.Child, key: Optional[str] = None, color: Optional[Literal['lightest', 'light', 'dark', 'darkest', '']] = None, scale: Optional[Literal['medium', 'large', '']] = None, lang: Optional[str] = None, dir: Optional[Literal['ltr', 'rtl', '']] = None, system: Optional[Literal['spectrum', 'express']] = None, **props: Any)
+.. py:class:: SpTheme(*children: spaday.component.Child, key: str | None = None, color: Literal['lightest', 'light', 'dark', 'darkest', ''] | None = None, scale: Literal['medium', 'large', ''] | None = None, lang: str | None = None, dir: Literal['ltr', 'rtl', ''] | None = None, system: Literal['spectrum', 'express'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 

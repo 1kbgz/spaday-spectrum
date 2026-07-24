@@ -15,7 +15,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: SpTheme(*children: spaday.component.Child, key: Optional[str] = None, color: Optional[Literal['lightest', 'light', 'dark', 'darkest', '']] = None, scale: Optional[Literal['medium', 'large', '']] = None, lang: Optional[str] = None, dir: Optional[Literal['ltr', 'rtl', '']] = None, system: Optional[Literal['spectrum', 'express']] = None, **props: Any)
+.. py:class:: SpTheme(*children: spaday.component.Child, key: str | None = None, color: Literal['lightest', 'light', 'dark', 'darkest', ''] | None = None, scale: Literal['medium', 'large', ''] | None = None, lang: str | None = None, dir: Literal['ltr', 'rtl', ''] | None = None, system: Literal['spectrum', 'express'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 

@@ -15,7 +15,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: SpSwitch(*children: spaday.component.Child, key: Optional[str] = None, emphasized: Optional[bool] = None, **props: Any)
+.. py:class:: SpSwitch(*children: spaday.component.Child, key: str | None = None, emphasized: bool | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
