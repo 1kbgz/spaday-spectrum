@@ -12,8 +12,8 @@ importers:
         specifier: 1.12.2
         version: 1.12.2
       '@spectrum-web-components/checkbox':
-        specifier: 1.11.2
-        version: 1.11.2
+        specifier: 1.12.2
+        version: 1.12.2
       '@spectrum-web-components/switch':
         specifier: 1.12.2
         version: 1.12.2
@@ -252,26 +252,14 @@ packages:
   '@spectrum-web-components/base@1.12.2':
     resolution: {integrity: sha512-7vB3182FqJzRevafUWlFRw/bfM4ZjC+Mmh5Fh0mDmVcP/SohUowrmHsQns1fsQPi+/O8iMP8XbtT7sAFp6ejkA==}
 
-  '@spectrum-web-components/button@1.11.2':
-    resolution: {integrity: sha512-dQy+PcCqTu+eDZ9l9/x5gtGgLuHq/FDNqWut2lwNSg6s57JO1UzvUGux+Ga+e444j8OsPUXpA8C/FdR7C7KHGw==}
-
   '@spectrum-web-components/button@1.12.2':
     resolution: {integrity: sha512-THab5wD0gzF4vOzUrQwvrNoHYk5fvtVHXNlY272YmEMaVGCP/mpqS2Kf5Pbd9sSNKhe5uRn9QRCVve+e4TZjCw==}
-
-  '@spectrum-web-components/checkbox@1.11.2':
-    resolution: {integrity: sha512-Pdz+4OBoKK21ju7eEti1nqIYCA7av+6vZY0bKV4aVDuSwrilskfngnYAuYigEjnkZqScjEYD4ib+eg8zs43wGg==}
 
   '@spectrum-web-components/checkbox@1.12.2':
     resolution: {integrity: sha512-zXNYRwrdpuzXMBBzZUOkG06uELQQDF2C7xMxLCB1dsuLAswodi4yw2VvydsQ6mOmU46Zo8lmX3okEKzkSDU0/A==}
 
-  '@spectrum-web-components/clear-button@1.11.2':
-    resolution: {integrity: sha512-OMTLWYosACH2Y+Eqmugo4/Z9Ckpir9RJIcXwiEayV9f72TNn3zEZax1o62gw44ipV23zgxcPBzsS75f/jKXqHw==}
-
   '@spectrum-web-components/clear-button@1.12.2':
     resolution: {integrity: sha512-iTDs+FQJkHelR+f4Iz3JL+i5ltbI5XHpweFYLn6UgP+tO6hjZfIr1iw6bCaDs1MEHLIJez1a4mYl0aR6orKa6Q==}
-
-  '@spectrum-web-components/close-button@1.11.2':
-    resolution: {integrity: sha512-BF9DtBNzrsrQBZXSmgkU2xPwsHUyrlgV9uuExB3f2r/XwK2sT4sa2Xy5C0J6BozrYUj8cfDwyLxtS52aetyH1Q==}
 
   '@spectrum-web-components/close-button@1.12.2':
     resolution: {integrity: sha512-T1owl+MncqZTMapRZvwGI0IRzzYigzDpsGWR4yu4yc8MDD8D9k067KFZeh2Og1o5uzLNMT9jr6qUh795Xk6rtg==}
@@ -1526,17 +1514,6 @@ snapshots:
     dependencies:
       lit: 3.3.3
 
-  '@spectrum-web-components/button@1.11.2':
-    dependencies:
-      '@spectrum-web-components/base': 1.11.2
-      '@spectrum-web-components/clear-button': 1.11.2
-      '@spectrum-web-components/close-button': 1.11.2
-      '@spectrum-web-components/icon': 1.11.2
-      '@spectrum-web-components/icons-ui': 1.11.2
-      '@spectrum-web-components/progress-circle': 1.11.2
-      '@spectrum-web-components/reactive-controllers': 1.11.2
-      '@spectrum-web-components/shared': 1.11.2
-
   '@spectrum-web-components/button@1.12.2':
     dependencies:
       '@spectrum-web-components/base': 1.12.2
@@ -1548,13 +1525,6 @@ snapshots:
       '@spectrum-web-components/reactive-controllers': 1.12.2
       '@spectrum-web-components/shared': 1.12.2
 
-  '@spectrum-web-components/checkbox@1.11.2':
-    dependencies:
-      '@spectrum-web-components/base': 1.11.2
-      '@spectrum-web-components/icon': 1.11.2
-      '@spectrum-web-components/icons-ui': 1.11.2
-      '@spectrum-web-components/shared': 1.11.2
-
   '@spectrum-web-components/checkbox@1.12.2':
     dependencies:
       '@spectrum-web-components/base': 1.12.2
@@ -1562,17 +1532,9 @@ snapshots:
       '@spectrum-web-components/icons-ui': 1.12.2
       '@spectrum-web-components/shared': 1.12.2
 
-  '@spectrum-web-components/clear-button@1.11.2':
-    dependencies:
-      '@spectrum-web-components/base': 1.11.2
-
   '@spectrum-web-components/clear-button@1.12.2':
     dependencies:
       '@spectrum-web-components/base': 1.12.2
-
-  '@spectrum-web-components/close-button@1.11.2':
-    dependencies:
-      '@spectrum-web-components/base': 1.11.2
 
   '@spectrum-web-components/close-button@1.12.2':
     dependencies:
