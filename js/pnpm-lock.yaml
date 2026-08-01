@@ -18,8 +18,8 @@ importers:
         specifier: 1.12.2
         version: 1.12.2
       '@spectrum-web-components/tabs':
-        specifier: 1.11.2
-        version: 1.11.2
+        specifier: 1.12.2
+        version: 1.12.2
       '@spectrum-web-components/textfield':
         specifier: 1.11.2
         version: 1.11.2
@@ -243,8 +243,8 @@ packages:
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
 
-  '@spectrum-web-components/action-button@1.11.2':
-    resolution: {integrity: sha512-c3f0T3WKmTWGMmDQa5wyt0t9MEbx9p8w5VC++q1Cw8gGdh5P6zJR958gP/vOKFyPQm/opbAe1nKrSqwVRcs8NQ==}
+  '@spectrum-web-components/action-button@1.12.2':
+    resolution: {integrity: sha512-iH9gAJhbRAa4D8oxQSXYq8b9uXu7KIT7ZhpEdFYqk0AwMs+doIqLT0EDy9P90BI9nHRZvDWUnQ0pS+nkzbq+0g==}
 
   '@spectrum-web-components/base@1.11.2':
     resolution: {integrity: sha512-clE3qfZt2M/wLjbGMrpaUplIEDrrRVTA6SbxddXflNaIfmp+QCyWAj36oudPeAfnXVLG1/oyrc0wQwHEJ/gI3Q==}
@@ -255,6 +255,9 @@ packages:
   '@spectrum-web-components/button@1.11.2':
     resolution: {integrity: sha512-dQy+PcCqTu+eDZ9l9/x5gtGgLuHq/FDNqWut2lwNSg6s57JO1UzvUGux+Ga+e444j8OsPUXpA8C/FdR7C7KHGw==}
 
+  '@spectrum-web-components/button@1.12.2':
+    resolution: {integrity: sha512-THab5wD0gzF4vOzUrQwvrNoHYk5fvtVHXNlY272YmEMaVGCP/mpqS2Kf5Pbd9sSNKhe5uRn9QRCVve+e4TZjCw==}
+
   '@spectrum-web-components/checkbox@1.11.2':
     resolution: {integrity: sha512-Pdz+4OBoKK21ju7eEti1nqIYCA7av+6vZY0bKV4aVDuSwrilskfngnYAuYigEjnkZqScjEYD4ib+eg8zs43wGg==}
 
@@ -264,8 +267,14 @@ packages:
   '@spectrum-web-components/clear-button@1.11.2':
     resolution: {integrity: sha512-OMTLWYosACH2Y+Eqmugo4/Z9Ckpir9RJIcXwiEayV9f72TNn3zEZax1o62gw44ipV23zgxcPBzsS75f/jKXqHw==}
 
+  '@spectrum-web-components/clear-button@1.12.2':
+    resolution: {integrity: sha512-iTDs+FQJkHelR+f4Iz3JL+i5ltbI5XHpweFYLn6UgP+tO6hjZfIr1iw6bCaDs1MEHLIJez1a4mYl0aR6orKa6Q==}
+
   '@spectrum-web-components/close-button@1.11.2':
     resolution: {integrity: sha512-BF9DtBNzrsrQBZXSmgkU2xPwsHUyrlgV9uuExB3f2r/XwK2sT4sa2Xy5C0J6BozrYUj8cfDwyLxtS52aetyH1Q==}
+
+  '@spectrum-web-components/close-button@1.12.2':
+    resolution: {integrity: sha512-T1owl+MncqZTMapRZvwGI0IRzzYigzDpsGWR4yu4yc8MDD8D9k067KFZeh2Og1o5uzLNMT9jr6qUh795Xk6rtg==}
 
   '@spectrum-web-components/core@0.0.4':
     resolution: {integrity: sha512-EPJBQwJWQuabDPfKMqb5Q3++/xePXR9toTvKQ12bkBR3DG/bX6/O7sEzx+X8ZAdx+72PZwZ9/bWq9D33qv0gQA==}
@@ -318,8 +327,8 @@ packages:
   '@spectrum-web-components/switch@1.12.2':
     resolution: {integrity: sha512-SDOcY3U+eFGD2Zb1j7Jgig2rbQqYZ1IyilqhvIipcWGseQz36pj8TAhxv/joveX0wTn2/xn4BfP0wxXN/vTA7w==}
 
-  '@spectrum-web-components/tabs@1.11.2':
-    resolution: {integrity: sha512-tayVELrg0BhRtONvaGfLtmTilz8+lZ3wErTfRfAumBhwhVYwmzgETcD+i9TinJWpqSLR+a4czNJb1mHdTHBpIQ==}
+  '@spectrum-web-components/tabs@1.12.2':
+    resolution: {integrity: sha512-ltCjt04h4exA4dZXTE8Ck+9f2f1/9OZeAWSZi3UQ5jderBzQwoo5TPjBA2qBVUsqMiZ5yaoa/sAPp7GLjljLGg==}
 
   '@spectrum-web-components/textfield@1.11.2':
     resolution: {integrity: sha512-Cd7H72vwBbg+Bgx/ofFiZiMRqDRqd7BEyIQGkoo4ci9PYFPU69TJmX+JQ0JZ+GXpVtnsBkqwA+To547xBGis2g==}
@@ -1500,13 +1509,13 @@ snapshots:
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
-  '@spectrum-web-components/action-button@1.11.2':
+  '@spectrum-web-components/action-button@1.12.2':
     dependencies:
-      '@spectrum-web-components/base': 1.11.2
-      '@spectrum-web-components/button': 1.11.2
-      '@spectrum-web-components/icon': 1.11.2
-      '@spectrum-web-components/icons-ui': 1.11.2
-      '@spectrum-web-components/shared': 1.11.2
+      '@spectrum-web-components/base': 1.12.2
+      '@spectrum-web-components/button': 1.12.2
+      '@spectrum-web-components/icon': 1.12.2
+      '@spectrum-web-components/icons-ui': 1.12.2
+      '@spectrum-web-components/shared': 1.12.2
 
   '@spectrum-web-components/base@1.11.2':
     dependencies:
@@ -1528,6 +1537,17 @@ snapshots:
       '@spectrum-web-components/reactive-controllers': 1.11.2
       '@spectrum-web-components/shared': 1.11.2
 
+  '@spectrum-web-components/button@1.12.2':
+    dependencies:
+      '@spectrum-web-components/base': 1.12.2
+      '@spectrum-web-components/clear-button': 1.12.2
+      '@spectrum-web-components/close-button': 1.12.2
+      '@spectrum-web-components/icon': 1.12.2
+      '@spectrum-web-components/icons-ui': 1.12.2
+      '@spectrum-web-components/progress-circle': 1.12.2
+      '@spectrum-web-components/reactive-controllers': 1.12.2
+      '@spectrum-web-components/shared': 1.12.2
+
   '@spectrum-web-components/checkbox@1.11.2':
     dependencies:
       '@spectrum-web-components/base': 1.11.2
@@ -1546,9 +1566,17 @@ snapshots:
     dependencies:
       '@spectrum-web-components/base': 1.11.2
 
+  '@spectrum-web-components/clear-button@1.12.2':
+    dependencies:
+      '@spectrum-web-components/base': 1.12.2
+
   '@spectrum-web-components/close-button@1.11.2':
     dependencies:
       '@spectrum-web-components/base': 1.11.2
+
+  '@spectrum-web-components/close-button@1.12.2':
+    dependencies:
+      '@spectrum-web-components/base': 1.12.2
 
   '@spectrum-web-components/core@0.0.4':
     dependencies:
@@ -1645,15 +1673,15 @@ snapshots:
       '@spectrum-web-components/base': 1.12.2
       '@spectrum-web-components/checkbox': 1.12.2
 
-  '@spectrum-web-components/tabs@1.11.2':
+  '@spectrum-web-components/tabs@1.12.2':
     dependencies:
       '@lit-labs/observers': 2.0.2
-      '@spectrum-web-components/action-button': 1.11.2
-      '@spectrum-web-components/base': 1.11.2
-      '@spectrum-web-components/icon': 1.11.2
-      '@spectrum-web-components/icons-ui': 1.11.2
-      '@spectrum-web-components/reactive-controllers': 1.11.2
-      '@spectrum-web-components/shared': 1.11.2
+      '@spectrum-web-components/action-button': 1.12.2
+      '@spectrum-web-components/base': 1.12.2
+      '@spectrum-web-components/icon': 1.12.2
+      '@spectrum-web-components/icons-ui': 1.12.2
+      '@spectrum-web-components/reactive-controllers': 1.12.2
+      '@spectrum-web-components/shared': 1.12.2
 
   '@spectrum-web-components/textfield@1.11.2':
     dependencies:
