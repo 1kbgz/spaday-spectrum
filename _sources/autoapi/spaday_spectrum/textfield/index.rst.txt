@@ -15,7 +15,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: SpTextfield(*children: spaday.component.Child, key: str | None = None, value: Any = None, allowed_keys: str | None = None, focused: bool | None = None, invalid: bool | None = None, label: str | None = None, name: str | None = None, placeholder: str | None = None, type: Any = None, pattern: str | None = None, grows: bool | None = None, maxlength: float | None = None, minlength: float | None = None, multiline: bool | None = None, readonly: bool | None = None, rows: float | None = None, valid: bool | None = None, quiet: bool | None = None, required: bool | None = None, autocomplete: Any = None, **props: Any)
+.. py:class:: SpTextfield(*children: spaday.component.Child, key: str | None = None, value: Any = None, allowed_keys: str | None = None, focused: bool | None = None, invalid: bool | None = None, label: str | None = None, name: str | None = None, placeholder: str | None = None, type: Any = None, pattern: str | None = None, grows: bool | None = None, maxlength: float | None = None, minlength: float | None = None, multiline: bool | None = None, readonly: bool | None = None, tooltip_placement: Any = None, rows: float | None = None, valid: bool | None = None, quiet: bool | None = None, required: bool | None = None, autocomplete: Any = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 

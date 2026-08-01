@@ -319,7 +319,6 @@
         <span class="n">key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">auto</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">compact</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="nb">dir</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;ltr&quot;</span><span class="p">,</span> <span class="s2">&quot;rtl&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">direction</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;vertical&quot;</span><span class="p">,</span> <span class="s2">&quot;vertical-right&quot;</span><span class="p">,</span> <span class="s2">&quot;horizontal&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">emphasized</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">label</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -334,7 +333,6 @@
             <span class="n">props</span><span class="o">=</span><span class="p">{</span>
                 <span class="s2">&quot;auto&quot;</span><span class="p">:</span> <span class="n">auto</span><span class="p">,</span>
                 <span class="s2">&quot;compact&quot;</span><span class="p">:</span> <span class="n">compact</span><span class="p">,</span>
-                <span class="s2">&quot;dir&quot;</span><span class="p">:</span> <span class="nb">dir</span><span class="p">,</span>
                 <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="n">direction</span><span class="p">,</span>
                 <span class="s2">&quot;emphasized&quot;</span><span class="p">:</span> <span class="n">emphasized</span><span class="p">,</span>
                 <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="n">label</span><span class="p">,</span>
@@ -359,7 +357,6 @@
         <span class="n">compact</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">label_previous</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">label_next</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="nb">dir</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;ltr&quot;</span><span class="p">,</span> <span class="s2">&quot;rtl&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="o">**</span><span class="n">props</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
@@ -369,7 +366,6 @@
                 <span class="s2">&quot;compact&quot;</span><span class="p">:</span> <span class="n">compact</span><span class="p">,</span>
                 <span class="s2">&quot;label-previous&quot;</span><span class="p">:</span> <span class="n">label_previous</span><span class="p">,</span>
                 <span class="s2">&quot;label-next&quot;</span><span class="p">:</span> <span class="n">label_next</span><span class="p">,</span>
-                <span class="s2">&quot;dir&quot;</span><span class="p">:</span> <span class="nb">dir</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="o">**</span><span class="n">props</span><span class="p">,</span>
         <span class="p">)</span></div>

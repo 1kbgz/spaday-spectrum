@@ -181,7 +181,7 @@ Package Contents
 
 
 
-.. py:class:: SpTabs(*children: spaday.component.Child, key: str | None = None, auto: bool | None = None, compact: bool | None = None, dir: Literal['ltr', 'rtl'] | None = None, direction: Literal['vertical', 'vertical-right', 'horizontal'] | None = None, emphasized: bool | None = None, label: str | None = None, enableTabsScroll: bool | None = None, quiet: bool | None = None, selected: str | None = None, **props: Any)
+.. py:class:: SpTabs(*children: spaday.component.Child, key: str | None = None, auto: bool | None = None, compact: bool | None = None, direction: Literal['vertical', 'vertical-right', 'horizontal'] | None = None, emphasized: bool | None = None, label: str | None = None, enableTabsScroll: bool | None = None, quiet: bool | None = None, selected: str | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -200,7 +200,7 @@ Package Contents
 
 
 
-.. py:class:: SpTabsOverflow(*children: spaday.component.Child, key: str | None = None, compact: bool | None = None, label_previous: str | None = None, label_next: str | None = None, dir: Literal['ltr', 'rtl'] | None = None, **props: Any)
+.. py:class:: SpTabsOverflow(*children: spaday.component.Child, key: str | None = None, compact: bool | None = None, label_previous: str | None = None, label_next: str | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -219,7 +219,7 @@ Package Contents
 
 
 
-.. py:class:: SpTextfield(*children: spaday.component.Child, key: str | None = None, value: Any = None, allowed_keys: str | None = None, focused: bool | None = None, invalid: bool | None = None, label: str | None = None, name: str | None = None, placeholder: str | None = None, type: Any = None, pattern: str | None = None, grows: bool | None = None, maxlength: float | None = None, minlength: float | None = None, multiline: bool | None = None, readonly: bool | None = None, rows: float | None = None, valid: bool | None = None, quiet: bool | None = None, required: bool | None = None, autocomplete: Any = None, **props: Any)
+.. py:class:: SpTextfield(*children: spaday.component.Child, key: str | None = None, value: Any = None, allowed_keys: str | None = None, focused: bool | None = None, invalid: bool | None = None, label: str | None = None, name: str | None = None, placeholder: str | None = None, type: Any = None, pattern: str | None = None, grows: bool | None = None, maxlength: float | None = None, minlength: float | None = None, multiline: bool | None = None, readonly: bool | None = None, tooltip_placement: Any = None, rows: float | None = None, valid: bool | None = None, quiet: bool | None = None, required: bool | None = None, autocomplete: Any = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -238,7 +238,7 @@ Package Contents
 
 
 
-.. py:class:: SpTheme(*children: spaday.component.Child, key: str | None = None, color: Literal['lightest', 'light', 'dark', 'darkest', ''] | None = None, scale: Literal['medium', 'large', ''] | None = None, lang: str | None = None, dir: Literal['ltr', 'rtl', ''] | None = None, system: Literal['spectrum', 'express'] | None = None, **props: Any)
+.. py:class:: SpTheme(*children: spaday.component.Child, key: str | None = None, color: Literal['lightest', 'light', 'dark', 'darkest', ''] | None = None, scale: Literal['medium', 'large', ''] | None = None, lang: str | None = None, system: Literal['spectrum', 'express'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
