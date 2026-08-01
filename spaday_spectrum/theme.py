@@ -18,7 +18,6 @@ class SpTheme(Component):
         color: Literal["lightest", "light", "dark", "darkest", ""] | None = None,
         scale: Literal["medium", "large", ""] | None = None,
         lang: str | None = None,
-        dir: Literal["ltr", "rtl", ""] | None = None,
         system: Literal["spectrum", "express"] | None = None,
         **props: Any,
     ) -> None:
@@ -29,7 +28,6 @@ class SpTheme(Component):
                 "color": color,
                 "scale": scale,
                 "lang": lang,
-                "dir": dir,
                 "system": system,
             },
             **props,

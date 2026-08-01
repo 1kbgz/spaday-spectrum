@@ -41,14 +41,14 @@
   },
   "dependencies": {
     "@spectrum-web-components/button": "1.12.2",
-    "@spectrum-web-components/checkbox": "1.11.2",
+    "@spectrum-web-components/checkbox": "1.12.2",
     "@spectrum-web-components/switch": "1.12.2",
     "@spectrum-web-components/tabs": "1.12.2",
-    "@spectrum-web-components/textfield": "1.11.2",
-    "@spectrum-web-components/theme": "1.11.2"
+    "@spectrum-web-components/textfield": "1.12.2",
+    "@spectrum-web-components/theme": "1.12.2"
   },
   "devDependencies": {
-    "@playwright/test": "^1.60.0",
+    "@playwright/test": "^1.62.1",
     "cpy": "^13.2.2",
     "esbuild": "^0.28.0",
     "http-server": "^14.1.1",

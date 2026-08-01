@@ -67,7 +67,6 @@ class SpTabs(Component):
         key: str | None = None,
         auto: bool | None = None,
         compact: bool | None = None,
-        dir: Literal["ltr", "rtl"] | None = None,
         direction: Literal["vertical", "vertical-right", "horizontal"] | None = None,
         emphasized: bool | None = None,
         label: str | None = None,
@@ -82,7 +81,6 @@ class SpTabs(Component):
             props={
                 "auto": auto,
                 "compact": compact,
-                "dir": dir,
                 "direction": direction,
                 "emphasized": emphasized,
                 "label": label,
@@ -104,7 +102,6 @@ class SpTabsOverflow(Component):
         compact: bool | None = None,
         label_previous: str | None = None,
         label_next: str | None = None,
-        dir: Literal["ltr", "rtl"] | None = None,
         **props: Any,
     ) -> None:
         super().__init__(
@@ -114,7 +111,6 @@ class SpTabsOverflow(Component):
                 "compact": compact,
                 "label-previous": label_previous,
                 "label-next": label_next,
-                "dir": dir,
             },
             **props,
         )
