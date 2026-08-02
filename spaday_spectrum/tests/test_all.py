@@ -1,4 +1,8 @@
+<<<<<<< before updating
 from spaday.bootstrap import bootstrap
+=======
+from spaday_spectrum import *
+>>>>>>> after updating
 
 from spaday_spectrum import SpButton, SpCheckbox, SpTab, SpTabPanel, SpTabs, SpTextfield, SpTheme, package
 
