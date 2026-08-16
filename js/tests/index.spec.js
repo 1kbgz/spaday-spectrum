@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 
+<<<<<<< before updating
 test("registers the first Spectrum component slice with a theme", async ({
   page,
 }) => {
@@ -12,6 +13,11 @@ test("registers the first Spectrum component slice with a theme", async ({
         <sp-checkbox>Enabled</sp-checkbox>
         <sp-switch>Live</sp-switch>
       </sp-theme>`;
+=======
+test.describe("Basics", () => {
+  test("basic", async () => {
+    await expect("").toBe("");
+>>>>>>> after updating
   });
 
   await expect(page.locator("sp-button")).toHaveText("Save");
