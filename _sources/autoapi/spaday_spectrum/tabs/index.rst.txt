@@ -29,7 +29,8 @@ Module Contents
    props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
    ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
    ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
-   "leave the element's own default").
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
 
 
    .. py:attribute:: tag
@@ -48,7 +49,8 @@ Module Contents
    props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
    ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
    ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
-   "leave the element's own default").
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
 
 
    .. py:attribute:: tag
@@ -67,7 +69,8 @@ Module Contents
    props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
    ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
    ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
-   "leave the element's own default").
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
 
 
    .. py:attribute:: tag
@@ -86,7 +89,8 @@ Module Contents
    props as keywords — ``App(Nav("title"), Body(...), id="root")`` — or build it up fluently with
    ``.child()`` / ``.prop()``. A string child becomes a text node. Subclasses set the class attribute
    ``tag`` and forward their typed props via ``props=`` (only the ones the author set — ``None`` means
-   "leave the element's own default").
+   "leave the element's own default"). CEM-generated subclasses also set the class-level ``schema``
+   used by component catalogs; hand-authored catalog components may set it explicitly.
 
 
    .. py:attribute:: tag

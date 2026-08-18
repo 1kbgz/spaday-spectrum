@@ -249,13 +249,13 @@
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">spaday.component</span><span class="w"> </span><span class="kn">import</span> <span class="n">Child</span><span class="p">,</span> <span class="n">Component</span>
 
-<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SpButton&quot;</span><span class="p">,</span> <span class="s2">&quot;SpClearButton&quot;</span><span class="p">,</span> <span class="s2">&quot;SpCloseButton&quot;</span><span class="p">]</span>
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"SpButton"</span><span class="p">,</span> <span class="s2">"SpClearButton"</span><span class="p">,</span> <span class="s2">"SpCloseButton"</span><span class="p">]</span>
 
 
 <div class="viewcode-block" id="SpButton">
 <a class="viewcode-back" href="../../autoapi/spaday_spectrum/index.html#spaday_spectrum.button.SpButton">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SpButton</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
-    <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;sp-button&quot;</span>
+    <span class="n">tag</span> <span class="o">=</span> <span class="s2">"sp-button"</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -264,27 +264,27 @@
         <span class="n">pending_label</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">pending</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">variant</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">static_color</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">static_color</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">"black"</span><span class="p">,</span> <span class="s2">"white"</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">treatment</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">quiet</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">no_wrap</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">active</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="s2">&quot;submit&quot;</span><span class="p">,</span> <span class="s2">&quot;reset&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">"button"</span><span class="p">,</span> <span class="s2">"submit"</span><span class="p">,</span> <span class="s2">"reset"</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="o">**</span><span class="n">props</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
             <span class="o">*</span><span class="n">children</span><span class="p">,</span>
             <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span>
             <span class="n">props</span><span class="o">=</span><span class="p">{</span>
-                <span class="s2">&quot;pending-label&quot;</span><span class="p">:</span> <span class="n">pending_label</span><span class="p">,</span>
-                <span class="s2">&quot;pending&quot;</span><span class="p">:</span> <span class="n">pending</span><span class="p">,</span>
-                <span class="s2">&quot;variant&quot;</span><span class="p">:</span> <span class="n">variant</span><span class="p">,</span>
-                <span class="s2">&quot;static-color&quot;</span><span class="p">:</span> <span class="n">static_color</span><span class="p">,</span>
-                <span class="s2">&quot;treatment&quot;</span><span class="p">:</span> <span class="n">treatment</span><span class="p">,</span>
-                <span class="s2">&quot;quiet&quot;</span><span class="p">:</span> <span class="n">quiet</span><span class="p">,</span>
-                <span class="s2">&quot;no-wrap&quot;</span><span class="p">:</span> <span class="n">no_wrap</span><span class="p">,</span>
-                <span class="s2">&quot;active&quot;</span><span class="p">:</span> <span class="n">active</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
+                <span class="s2">"pending-label"</span><span class="p">:</span> <span class="n">pending_label</span><span class="p">,</span>
+                <span class="s2">"pending"</span><span class="p">:</span> <span class="n">pending</span><span class="p">,</span>
+                <span class="s2">"variant"</span><span class="p">:</span> <span class="n">variant</span><span class="p">,</span>
+                <span class="s2">"static-color"</span><span class="p">:</span> <span class="n">static_color</span><span class="p">,</span>
+                <span class="s2">"treatment"</span><span class="p">:</span> <span class="n">treatment</span><span class="p">,</span>
+                <span class="s2">"quiet"</span><span class="p">:</span> <span class="n">quiet</span><span class="p">,</span>
+                <span class="s2">"no-wrap"</span><span class="p">:</span> <span class="n">no_wrap</span><span class="p">,</span>
+                <span class="s2">"active"</span><span class="p">:</span> <span class="n">active</span><span class="p">,</span>
+                <span class="s2">"type"</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="o">**</span><span class="n">props</span><span class="p">,</span>
         <span class="p">)</span></div>
@@ -294,7 +294,7 @@
 <div class="viewcode-block" id="SpClearButton">
 <a class="viewcode-back" href="../../autoapi/spaday_spectrum/index.html#spaday_spectrum.button.SpClearButton">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SpClearButton</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
-    <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;sp-clear-button&quot;</span>
+    <span class="n">tag</span> <span class="o">=</span> <span class="s2">"sp-clear-button"</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -302,22 +302,22 @@
         <span class="n">key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">label</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">quiet</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">variant</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;overBackground&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">static_color</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;white&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">variant</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">"overBackground"</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">static_color</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">"white"</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">active</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="s2">&quot;submit&quot;</span><span class="p">,</span> <span class="s2">&quot;reset&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">"button"</span><span class="p">,</span> <span class="s2">"submit"</span><span class="p">,</span> <span class="s2">"reset"</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="o">**</span><span class="n">props</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
             <span class="o">*</span><span class="n">children</span><span class="p">,</span>
             <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span>
             <span class="n">props</span><span class="o">=</span><span class="p">{</span>
-                <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="n">label</span><span class="p">,</span>
-                <span class="s2">&quot;quiet&quot;</span><span class="p">:</span> <span class="n">quiet</span><span class="p">,</span>
-                <span class="s2">&quot;variant&quot;</span><span class="p">:</span> <span class="n">variant</span><span class="p">,</span>
-                <span class="s2">&quot;static-color&quot;</span><span class="p">:</span> <span class="n">static_color</span><span class="p">,</span>
-                <span class="s2">&quot;active&quot;</span><span class="p">:</span> <span class="n">active</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
+                <span class="s2">"label"</span><span class="p">:</span> <span class="n">label</span><span class="p">,</span>
+                <span class="s2">"quiet"</span><span class="p">:</span> <span class="n">quiet</span><span class="p">,</span>
+                <span class="s2">"variant"</span><span class="p">:</span> <span class="n">variant</span><span class="p">,</span>
+                <span class="s2">"static-color"</span><span class="p">:</span> <span class="n">static_color</span><span class="p">,</span>
+                <span class="s2">"active"</span><span class="p">:</span> <span class="n">active</span><span class="p">,</span>
+                <span class="s2">"type"</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="o">**</span><span class="n">props</span><span class="p">,</span>
         <span class="p">)</span></div>
@@ -327,26 +327,26 @@
 <div class="viewcode-block" id="SpCloseButton">
 <a class="viewcode-back" href="../../autoapi/spaday_spectrum/index.html#spaday_spectrum.button.SpCloseButton">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SpCloseButton</span><span class="p">(</span><span class="n">Component</span><span class="p">):</span>
-    <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;sp-close-button&quot;</span>
+    <span class="n">tag</span> <span class="o">=</span> <span class="s2">"sp-close-button"</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="o">*</span><span class="n">children</span><span class="p">:</span> <span class="n">Child</span><span class="p">,</span>
         <span class="n">key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">variant</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">static_color</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">static_color</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">"black"</span><span class="p">,</span> <span class="s2">"white"</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">active</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;button&quot;</span><span class="p">,</span> <span class="s2">&quot;submit&quot;</span><span class="p">,</span> <span class="s2">&quot;reset&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">"button"</span><span class="p">,</span> <span class="s2">"submit"</span><span class="p">,</span> <span class="s2">"reset"</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="o">**</span><span class="n">props</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
             <span class="o">*</span><span class="n">children</span><span class="p">,</span>
             <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span>
             <span class="n">props</span><span class="o">=</span><span class="p">{</span>
-                <span class="s2">&quot;variant&quot;</span><span class="p">:</span> <span class="n">variant</span><span class="p">,</span>
-                <span class="s2">&quot;static-color&quot;</span><span class="p">:</span> <span class="n">static_color</span><span class="p">,</span>
-                <span class="s2">&quot;active&quot;</span><span class="p">:</span> <span class="n">active</span><span class="p">,</span>
-                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
+                <span class="s2">"variant"</span><span class="p">:</span> <span class="n">variant</span><span class="p">,</span>
+                <span class="s2">"static-color"</span><span class="p">:</span> <span class="n">static_color</span><span class="p">,</span>
+                <span class="s2">"active"</span><span class="p">:</span> <span class="n">active</span><span class="p">,</span>
+                <span class="s2">"type"</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="o">**</span><span class="n">props</span><span class="p">,</span>
         <span class="p">)</span></div>
