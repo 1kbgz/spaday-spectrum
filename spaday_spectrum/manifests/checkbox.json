@@ -1,0 +1,279 @@
+{
+  "schemaVersion": "1.0.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/Checkbox.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Checkbox",
+          "slots": [
+            {
+              "description": "content to display as the label for the Checkbox",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "shadowRootOptions",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ ...SpectrumElement.shadowRootOptions, delegatesFocus: true, }"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "indeterminate",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "indeterminate",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "invalid",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "invalid",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "emphasized",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "emphasized",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "tabIndex",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "public",
+              "default": "0",
+              "attribute": "tabindex",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "click",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleChange",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "CheckboxMixin",
+                "module": "src/CheckboxMixin.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "checked",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "CheckboxMixin",
+                "module": "src/CheckboxMixin.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "privacy": "public",
+              "attribute": "name",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "CheckboxMixin",
+                "module": "src/CheckboxMixin.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "readonly",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "CheckboxMixin",
+                "module": "src/CheckboxMixin.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "inputElement",
+              "type": {
+                "text": "HTMLInputElement"
+              },
+              "inheritedFrom": {
+                "name": "CheckboxMixin",
+                "module": "src/CheckboxMixin.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "description": "Announces a change in the `checked` property of a Checkbox",
+              "name": "change"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "indeterminate",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "indeterminate"
+            },
+            {
+              "name": "invalid",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "invalid"
+            },
+            {
+              "name": "emphasized",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "emphasized"
+            },
+            {
+              "name": "tabindex",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "tabIndex"
+            },
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "checked",
+              "inheritedFrom": {
+                "name": "CheckboxMixin",
+                "module": "src/CheckboxMixin.ts"
+              }
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "name",
+              "inheritedFrom": {
+                "name": "CheckboxMixin",
+                "module": "src/CheckboxMixin.ts"
+              }
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "readonly",
+              "inheritedFrom": {
+                "name": "CheckboxMixin",
+                "module": "src/CheckboxMixin.ts"
+              }
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'"
+              },
+              "fieldName": "size",
+              "inheritedFrom": {
+                "name": "SizedMixin",
+                "package": "@spectrum-web-components/base"
+              }
+            }
+          ],
+          "mixins": [
+            {
+              "name": "SizedMixin",
+              "package": "@spectrum-web-components/base"
+            },
+            {
+              "name": "CheckboxMixin",
+              "module": "/src/CheckboxMixin.js"
+            }
+          ],
+          "superclass": {
+            "name": "SpectrumElement",
+            "package": "@spectrum-web-components/base"
+          },
+          "tagName": "sp-checkbox",
+          "customElement": true
+        }
+      ]
+    }
+  ]
+}
