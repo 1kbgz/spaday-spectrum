@@ -2,6 +2,7 @@ from pathlib import Path
 
 from spaday import ComponentPackage
 
+from . import button, checkbox, switch, tabs, textfield, theme
 from .button import *
 from .checkbox import *
 from .switch import *
@@ -15,4 +16,5 @@ package = ComponentPackage(
     name="spectrum",
     assets_dir=Path(__file__).parent / "extension",
     assets=(("js", "cdn/index.js"),),
+    components=tuple(getattr(module, name) for module in (button, checkbox, switch, tabs, textfield, theme) for name in module.__all__),
 )
