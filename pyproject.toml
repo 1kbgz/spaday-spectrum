@@ -37,6 +37,13 @@ dependencies = [
 spectrum = "spaday_spectrum:package"
 
 [project.optional-dependencies]
+examples = [
+    "pydantic>=2",
+    "starlette",
+    "transports",
+    "uvicorn",
+    "websockets",
+]
 develop = [
     "build",
     "bump-my-version",
@@ -44,14 +51,20 @@ develop = [
     "codespell",
     "hatch-js",
     "hatchling",
+    "httpx",
     "mdformat",
     "mdformat-tables>=1",
+    "pydantic>=2",
     "pytest",
     "pytest-cov",
     "ruff",
+    "starlette",
+    "transports",
     "twine",
     "ty",
     "uv",
+    "uvicorn",
+    "websockets",
     "wheel",
 ]
 
@@ -89,6 +102,7 @@ replace = '"version": "{new_version}"'
 [tool.coverage.run]
 branch = true
 omit = [
+    "spaday_spectrum/example.py",
     "spaday_spectrum/tests/integration/",
 ]
 
