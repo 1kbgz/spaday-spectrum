@@ -15,7 +15,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: SpSwitch(*children: spaday.component.Child, key: str | None = None, emphasized: bool | None = None, **props: Any)
+.. py:class:: SpSwitch(*children: spaday.component.Child, key: str | None = None, emphasized: bool | None = None, checked: bool | None = None, name: str | None = None, readonly: bool | None = None, disabled: bool | None = None, autofocus: bool | None = None, tabindex: float | None = None, size: Literal['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -33,5 +33,8 @@ Module Contents
    .. py:attribute:: tag
       :value: 'sp-switch'
 
+
+
+   .. py:attribute:: schema
 
 

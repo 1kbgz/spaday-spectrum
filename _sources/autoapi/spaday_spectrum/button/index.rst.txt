@@ -17,7 +17,7 @@ Classes
 Module Contents
 ---------------
 
-.. py:class:: SpButton(*children: spaday.component.Child, key: str | None = None, pending_label: str | None = None, pending: bool | None = None, variant: Any = None, static_color: Literal['black', 'white'] | None = None, treatment: Any = None, quiet: bool | None = None, no_wrap: bool | None = None, active: bool | None = None, type: Literal['button', 'submit', 'reset'] | None = None, **props: Any)
+.. py:class:: SpButton(*children: spaday.component.Child, key: str | None = None, pending_label: str | None = None, pending: bool | None = None, variant: Any = None, static_color: Literal['black', 'white'] | None = None, treatment: Any = None, quiet: bool | None = None, no_wrap: bool | None = None, active: bool | None = None, type: Literal['button', 'submit', 'reset'] | None = None, disabled: bool | None = None, autofocus: bool | None = None, tabindex: float | None = None, download: str | None = None, label: str | None = None, href: str | None = None, target: Literal['_blank', '_parent', '_self', '_top'] | None = None, referrerpolicy: Literal['no-referrer', 'no-referrer-when-downgrade', 'origin', 'origin-when-cross-origin', 'same-origin', 'strict-origin', 'strict-origin-when-cross-origin', 'unsafe-url'] | None = None, rel: str | None = None, size: Literal['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -37,7 +37,10 @@ Module Contents
 
 
 
-.. py:class:: SpClearButton(*children: spaday.component.Child, key: str | None = None, label: str | None = None, quiet: bool | None = None, variant: Literal['overBackground'] | None = None, static_color: Literal['white'] | None = None, active: bool | None = None, type: Literal['button', 'submit', 'reset'] | None = None, **props: Any)
+   .. py:attribute:: schema
+
+
+.. py:class:: SpClearButton(*children: spaday.component.Child, key: str | None = None, label: str | None = None, quiet: bool | None = None, variant: Literal['overBackground'] | None = None, static_color: Literal['white'] | None = None, active: bool | None = None, type: Literal['button', 'submit', 'reset'] | None = None, disabled: bool | None = None, autofocus: bool | None = None, tabindex: float | None = None, download: str | None = None, href: str | None = None, target: Literal['_blank', '_parent', '_self', '_top'] | None = None, referrerpolicy: Literal['no-referrer', 'no-referrer-when-downgrade', 'origin', 'origin-when-cross-origin', 'same-origin', 'strict-origin', 'strict-origin-when-cross-origin', 'unsafe-url'] | None = None, rel: str | None = None, size: Literal['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -57,7 +60,10 @@ Module Contents
 
 
 
-.. py:class:: SpCloseButton(*children: spaday.component.Child, key: str | None = None, variant: Any = None, static_color: Literal['black', 'white'] | None = None, active: bool | None = None, type: Literal['button', 'submit', 'reset'] | None = None, **props: Any)
+   .. py:attribute:: schema
+
+
+.. py:class:: SpCloseButton(*children: spaday.component.Child, key: str | None = None, variant: Any = None, static_color: Literal['black', 'white'] | None = None, active: bool | None = None, type: Literal['button', 'submit', 'reset'] | None = None, disabled: bool | None = None, autofocus: bool | None = None, tabindex: float | None = None, download: str | None = None, label: str | None = None, href: str | None = None, target: Literal['_blank', '_parent', '_self', '_top'] | None = None, referrerpolicy: Literal['no-referrer', 'no-referrer-when-downgrade', 'origin', 'origin-when-cross-origin', 'same-origin', 'strict-origin', 'strict-origin-when-cross-origin', 'unsafe-url'] | None = None, rel: str | None = None, size: Literal['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -75,5 +81,8 @@ Module Contents
    .. py:attribute:: tag
       :value: 'sp-close-button'
 
+
+
+   .. py:attribute:: schema
 
 

@@ -4,6 +4,15 @@ test_all
 .. py:module:: test_all
 
 
+Attributes
+----------
+
+.. autoapisummary::
+
+   test_all.ROOT
+   test_all.CATALOG
+
+
 Functions
 ---------
 
@@ -11,12 +20,30 @@ Functions
 
    test_all.test_representative_spectrum_components_serialize
    test_all.test_package_drives_bootstrap_asset_url
+   test_all.test_catalog_declares_every_element_the_bundle_registers
+   test_all.test_catalog_carries_what_other_spectrum_packages_contribute
+   test_all.test_generated_catalog_is_current
 
 
 Module Contents
 ---------------
 
+.. py:data:: ROOT
+
+.. py:data:: CATALOG
+   :value: ('button', 'checkbox', 'switch', 'tabs', 'textfield', 'theme')
+
+
 .. py:function:: test_representative_spectrum_components_serialize()
 
 .. py:function:: test_package_drives_bootstrap_asset_url()
+
+.. py:function:: test_catalog_declares_every_element_the_bundle_registers()
+
+.. py:function:: test_catalog_carries_what_other_spectrum_packages_contribute()
+
+   Spectrum's per-package manifests leave out inherited attributes declared in another package.
+
+
+.. py:function:: test_generated_catalog_is_current(name)
 

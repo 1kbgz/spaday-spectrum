@@ -300,9 +300,15 @@ resets state. All three interactions run in the browser through spaday’s react
 <code class="docutils literal notranslate"><span class="pre">uvicorn</span> <span class="pre">app:app</span></code>. Open <a class="reference external" href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>.</p>
 <p>Installing this project registers the <code class="docutils literal notranslate"><span class="pre">spectrum</span></code> entry point with spaday. The equivalent explicit
 forms are <code class="docutils literal notranslate"><span class="pre">packages=[spaday_spectrum.package]</span></code> and <code class="docutils literal notranslate"><span class="pre">packages=[&quot;spaday_spectrum:package&quot;]</span></code>.</p>
-<p>The first release pins the six individual Spectrum packages to <code class="docutils literal notranslate"><span class="pre">1.11.2</span></code>. It deliberately avoids the
-full <code class="docutils literal notranslate"><span class="pre">&#64;spectrum-web-components/bundle</span></code>; more components should be added from concrete application needs
-and generated from their published Custom Elements Manifests.</p>
+<p>The package pins six individual Spectrum packages to <code class="docutils literal notranslate"><span class="pre">1.12.2</span></code>. It deliberately avoids the full
+<code class="docutils literal notranslate"><span class="pre">&#64;spectrum-web-components/bundle</span></code>; more components should be added from concrete application needs.</p>
+<p>The typed classes are generated from those packages’ Custom Elements Manifests with <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">catalog</span></code>.
+Spectrum publishes one package per component, and a published manifest leaves out what an element
+inherits from another package — <code class="docutils literal notranslate"><span class="pre">size</span></code>, <code class="docutils literal notranslate"><span class="pre">disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">href</span></code>, and on <code class="docutils literal notranslate"><span class="pre">sp-switch</span></code> even <code class="docutils literal notranslate"><span class="pre">checked</span></code>.
+<code class="docutils literal notranslate"><span class="pre">js/tools/manifests.mjs</span></code> resolves each element’s superclass and mixins through the manifests of the
+packages that declare them and writes the result to <code class="docutils literal notranslate"><span class="pre">spaday_spectrum/manifests/</span></code>, which the classes
+are generated from. <code class="docutils literal notranslate"><span class="pre">base</span></code> and <code class="docutils literal notranslate"><span class="pre">shared</span></code> publish no manifest at all, so the few declarations needed
+from them are transcribed in <code class="docutils literal notranslate"><span class="pre">js/tools/unpublished.json</span></code>; the tool fails on any class neither covers.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This library was generated using <a class="reference external" href="https://copier.readthedocs.io/en/stable/">copier</a> from the <a class="reference external" href="https://github.com/python-project-templates/base">Base Python Project Template repository</a>.</p>
@@ -356,8 +362,8 @@ and generated from their published Custom Elements Manifests.</p>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
-    <script data-searchlite-index="searchlite-index.json" defer="defer" src="_static/searchlite.js?v=43c3c99e"></script>
-    <script data-searchlite-adopt="true" defer="defer" src="_static/searchlite-ui.js?v=42b9d9bb"></script>
+    <script data-searchlite-index="searchlite-index.json" defer="defer" src="_static/searchlite.js?v=a5320898"></script>
+    <script data-searchlite-adopt="true" defer="defer" src="_static/searchlite-ui.js?v=4e4bdd69"></script>
     <script src="_static/js/custom.js?v=956e5d78"></script>
     </body>
 </html>

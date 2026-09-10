@@ -38,6 +38,9 @@ Module Contents
 
 
 
+   .. py:attribute:: schema
+
+
 .. py:class:: SpTabPanel(*children: spaday.component.Child, key: str | None = None, selected: bool | None = None, value: str | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
@@ -58,7 +61,10 @@ Module Contents
 
 
 
-.. py:class:: SpTabs(*children: spaday.component.Child, key: str | None = None, auto: bool | None = None, compact: bool | None = None, direction: Literal['vertical', 'vertical-right', 'horizontal'] | None = None, emphasized: bool | None = None, label: str | None = None, enableTabsScroll: bool | None = None, quiet: bool | None = None, selected: str | None = None, **props: Any)
+   .. py:attribute:: schema
+
+
+.. py:class:: SpTabs(*children: spaday.component.Child, key: str | None = None, auto: bool | None = None, compact: bool | None = None, direction: Literal['vertical', 'vertical-right', 'horizontal'] | None = None, emphasized: bool | None = None, label: str | None = None, enableTabsScroll: bool | None = None, quiet: bool | None = None, selected: str | None = None, disabled: bool | None = None, autofocus: bool | None = None, tabindex: float | None = None, size: Literal['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -78,7 +84,10 @@ Module Contents
 
 
 
-.. py:class:: SpTabsOverflow(*children: spaday.component.Child, key: str | None = None, compact: bool | None = None, label_previous: str | None = None, label_next: str | None = None, **props: Any)
+   .. py:attribute:: schema
+
+
+.. py:class:: SpTabsOverflow(*children: spaday.component.Child, key: str | None = None, compact: bool | None = None, label_previous: str | None = None, label_next: str | None = None, size: Literal['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'] | None = None, **props: Any)
 
    Bases: :py:obj:`spaday.component.Component`
 
@@ -96,5 +105,8 @@ Module Contents
    .. py:attribute:: tag
       :value: 'sp-tabs-overflow'
 
+
+
+   .. py:attribute:: schema
 
 

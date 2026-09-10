@@ -35,3 +35,6 @@ Module Contents
 
 
 
+   .. py:attribute:: schema
+
+
