@@ -1,0 +1,39 @@
+test_example
+============
+
+.. py:module:: test_example
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   test_example.request
+   test_example.run_ticks
+   test_example.test_example_serves_the_review_board
+   test_example.test_uploads_finish_and_assets_arrive
+   test_example.test_reviewing_an_asset_decides_it_once
+   test_example.test_filing_a_brief_checks_it_first
+
+
+Module Contents
+---------------
+
+.. py:function:: request(method: str, path: str, **kwargs)
+   :async:
+
+
+.. py:function:: run_ticks(monkeypatch, ticks: int)
+
+   Run the review stream for ``ticks`` iterations.
+
+
+.. py:function:: test_example_serves_the_review_board()
+
+.. py:function:: test_uploads_finish_and_assets_arrive(monkeypatch)
+
+.. py:function:: test_reviewing_an_asset_decides_it_once()
+
+.. py:function:: test_filing_a_brief_checks_it_first()
+

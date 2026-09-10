@@ -18,6 +18,8 @@ hidden: true
 [![License](https://img.shields.io/github/license/1kbgz/spaday-spectrum)](https://github.com/1kbgz/spaday-spectrum)
 [![PyPI](https://img.shields.io/pypi/v/spaday-spectrum.svg)](https://pypi.python.org/pypi/spaday-spectrum)
 
+[![Preview of spectrum components in spaday rendering a review board](https://raw.githubusercontent.com/1kbgz/spaday-spectrum/main/docs/img/preview.webp)](./spaday_spectrum/example.py)
+
 ## Overview
 
 `spaday-spectrum` provides generated Python bindings and a self-contained registration bundle for a
@@ -73,6 +75,20 @@ inherits from another package — `size`, `disabled`, `href`, and on `sp-switch`
 packages that declare them and writes the result to `spaday_spectrum/manifests/`, which the classes
 are generated from. `base` and `shared` publish no manifest at all, so the few declarations needed
 from them are transcribed in `js/tools/unpublished.json`; the tool fails on any class neither covers.
+
+## Run the local example
+
+```bash
+python -m pip install -e ".[examples]"
+python -m spaday_spectrum.example
+```
+
+Open `http://127.0.0.1:8028` for the [review board](spaday_spectrum/example.py): assets streamed from
+Python over transports and approved or sent back through Python endpoints, an activity feed, a brief
+form of text fields, checkboxes and a switch bound to spaday state and checked by the server, a pending
+button while it files, tabs and panels driven from the store, close and clear buttons, and switches for
+Spectrum's dark color and large scale. spaday-spectrum doesn't map spaday's shell palette yet, so the
+example maps it onto Spectrum's tokens itself.
 
 > [!NOTE]
 > This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).

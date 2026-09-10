@@ -1,0 +1,286 @@
+spaday_spectrum.example
+=======================
+
+.. py:module:: spaday_spectrum.example
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   spaday_spectrum.example.logger
+   spaday_spectrum.example.CHANNELS
+   spaday_spectrum.example.INCOMING
+   spaday_spectrum.example.feed
+   spaday_spectrum.example.session
+   spaday_spectrum.example.server
+   spaday_spectrum.example.asset_row
+   spaday_spectrum.example.assets_panel
+   spaday_spectrum.example.brief_panel
+   spaday_spectrum.example.activity_panel
+   spaday_spectrum.example.page
+   spaday_spectrum.example.styles
+   spaday_spectrum.example.app
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   spaday_spectrum.example.ReviewFeed
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   spaday_spectrum.example.asset
+   spaday_spectrum.example.refresh_totals
+   spaday_spectrum.example.log
+   spaday_spectrum.example.next_number
+   spaday_spectrum.example.stream_reviews
+   spaday_spectrum.example.decide
+   spaday_spectrum.example.submit_brief
+   spaday_spectrum.example.stat
+   spaday_spectrum.example.captioned
+
+
+Module Contents
+---------------
+
+.. py:data:: logger
+
+.. py:data:: CHANNELS
+   :value: ('web', 'social', 'email', 'print')
+
+
+.. py:data:: INCOMING
+   :value: [('Hero banner, autumn', 'Mara Lind', 'image'), ('Product teaser cut', 'Ravi Shah', 'video'),...
+
+
+.. py:function:: asset(number: int, name: str, owner: str, kind: str, progress: int = 100, status: str = 'Needs review') -> dict
+
+.. py:class:: ReviewFeed(/, **data: Any)
+
+   Bases: :py:obj:`pydantic.BaseModel`
+
+
+   !!! abstract "Usage Documentation"
+       [Models](../concepts/models.md)
+
+   A base class for creating Pydantic models.
+
+   .. attribute:: __class_vars__
+
+      The names of the class variables defined on the model.
+
+   .. attribute:: __private_attributes__
+
+      Metadata about the private attributes of the model.
+
+   .. attribute:: __signature__
+
+      The synthesized `__init__` [`Signature`][inspect.Signature] of the model.
+
+   .. attribute:: __pydantic_complete__
+
+      Whether model building is completed, or if there are still undefined fields.
+
+   .. attribute:: __pydantic_core_schema__
+
+      The core schema of the model.
+
+   .. attribute:: __pydantic_custom_init__
+
+      Whether the model has a custom `__init__` function.
+
+   .. attribute:: __pydantic_decorators__
+
+      Metadata containing the decorators defined on the model.
+      This replaces `Model.__validators__` and `Model.__root_validators__` from Pydantic V1.
+
+   .. attribute:: __pydantic_generic_metadata__
+
+      A dictionary containing metadata about generic Pydantic models.
+      The `origin` and `args` items map to the [`__origin__`][genericalias.__origin__]
+      and [`__args__`][genericalias.__args__] attributes of [generic aliases][types-genericalias],
+      and the `parameter` item maps to the `__parameter__` attribute of generic classes.
+
+   .. attribute:: __pydantic_parent_namespace__
+
+      Parent namespace of the model, used for automatic rebuilding of models.
+
+   .. attribute:: __pydantic_post_init__
+
+      The name of the post-init method for the model, if defined.
+
+   .. attribute:: __pydantic_root_model__
+
+      Whether the model is a [`RootModel`][pydantic.root_model.RootModel].
+
+   .. attribute:: __pydantic_serializer__
+
+      The `pydantic-core` `SchemaSerializer` used to dump instances of the model.
+
+   .. attribute:: __pydantic_validator__
+
+      The `pydantic-core` `SchemaValidator` used to validate instances of the model.
+
+   .. attribute:: __pydantic_fields__
+
+      A dictionary of field names and their corresponding [`FieldInfo`][pydantic.fields.FieldInfo] objects.
+
+   .. attribute:: __pydantic_computed_fields__
+
+      A dictionary of computed field names and their corresponding [`ComputedFieldInfo`][pydantic.fields.ComputedFieldInfo] objects.
+
+   .. attribute:: __pydantic_extra__
+
+      A dictionary containing extra values, if [`extra`][pydantic.config.ConfigDict.extra]
+      is set to `'allow'`.
+
+   .. attribute:: __pydantic_fields_set__
+
+      The names of fields explicitly set during instantiation.
+
+   .. attribute:: __pydantic_private__
+
+      Values of private attributes set on the model instance.
+
+   Create a new model by parsing and validating input data from keyword arguments.
+
+   Raises [`ValidationError`][pydantic_core.ValidationError] if the input data cannot be
+   validated to form a valid model.
+
+   `self` is explicitly positional-only to allow `self` as a field name.
+
+
+   .. py:attribute:: assets
+      :type:  list[dict]
+
+
+   .. py:attribute:: activity
+      :type:  list[dict]
+
+
+   .. py:attribute:: waiting
+      :type:  int
+      :value: 0
+
+
+
+   .. py:attribute:: approved
+      :type:  int
+      :value: 0
+
+
+
+.. py:data:: feed
+
+.. py:data:: session
+
+.. py:data:: server
+
+.. py:function:: refresh_totals() -> None
+
+.. py:function:: log(text: str) -> None
+
+.. py:function:: next_number() -> int
+
+.. py:function:: stream_reviews() -> None
+   :async:
+
+
+   Uploads advance every tick until they are ready for review; every third tick an asset arrives.
+
+
+.. py:function:: decide(request)
+   :async:
+
+
+.. py:function:: submit_brief(request)
+   :async:
+
+
+.. py:function:: stat(label: str, value_field: str)
+
+.. py:data:: asset_row
+
+.. py:data:: assets_panel
+
+.. py:function:: captioned(caption: str, control, wide: bool = False)
+
+.. py:data:: brief_panel
+
+.. py:data:: activity_panel
+
+.. py:data:: page
+
+.. py:data:: styles
+   :value: Multiline-String
+
+   .. raw:: html
+
+      <details><summary>Show Value</summary>
+
+   .. code-block:: python
+
+      """
+      <style>
+        body { margin: 0; }
+        /* spaday-spectrum ships no mapping of spaday's shell palette yet, so the page maps it onto Spectrum's
+           tokens here, inside the theme that defines them */
+        sp-theme { display: block; font-family: var(--spectrum-sans-font-family-stack, system-ui); color: var(--spectrum-neutral-content-color-default);
+          background: var(--spectrum-background-layer-1-color);
+          --spa-surface: var(--spectrum-background-layer-2-color); --spa-surface-2: var(--spectrum-background-layer-1-color);
+          --spa-border: var(--spectrum-gray-300); --spa-muted: var(--spectrum-neutral-subdued-content-color-default);
+          --spa-accent: var(--spectrum-accent-content-color-default); --spa-success: var(--spectrum-positive-visual-color);
+          --spa-warning: var(--spectrum-notice-visual-color); --spa-danger: var(--spectrum-negative-visual-color); }
+        spa-nav { justify-content: space-between; }
+        /* a tab panel lays out its content as a flex row */
+        sp-tab-panel > .panel { flex: 1; min-width: 0; }
+        .brand { font-size: 1.1rem; }
+        .page { box-sizing: border-box; width: 100%; max-width: 70rem; margin: 0 auto; padding: 1.5rem 1rem;
+          display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; gap: 1rem; }
+        .callout { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .5rem .5rem .5rem 1rem;
+          border-radius: 8px; border: 1px solid var(--spa-border); border-left: 4px solid var(--spa-accent); background: var(--spa-surface); }
+        .panel { display: grid; gap: 1rem; padding-block: 1rem; }
+        .muted { color: var(--spa-muted); }
+        .stats { flex-wrap: wrap; }
+        .stat { flex: 1 1 12rem; display: grid; gap: .25rem; padding: 1rem; border-radius: 8px; border: 1px solid var(--spa-border); background: var(--spa-surface); }
+        .stat span { color: var(--spa-muted); }
+        .stat strong { font-size: 1.75rem; }
+        .assets, .activity { display: grid; gap: .5rem; }
+        .asset { display: grid; grid-template-columns: minmax(0, 1fr) 9rem auto auto; align-items: center; gap: 1rem; padding: .75rem 1rem;
+          border-radius: 8px; border: 1px solid var(--spa-border); background: var(--spa-surface); }
+        .asset-main { display: grid; gap: .25rem; min-width: 0; }
+        .progress { height: 4px; border-radius: 2px; background: linear-gradient(to right, var(--spa-accent) var(--progress), var(--spa-border) 0); }
+        .status[data-status="Approved"] { color: var(--spa-success); }
+        .status[data-status="Changes requested"] { color: var(--spa-danger); }
+        .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.5rem; }
+        .field { display: grid; gap: .35rem; }
+        .field.wide { grid-column: 1 / -1; }
+        .caption { color: var(--spa-muted); font-size: .85rem; }
+        .form-grid sp-textfield { width: 100%; }
+        .form-grid spa-row sp-textfield { flex: 1; }
+        fieldset { display: flex; flex-wrap: wrap; gap: 1rem; margin: 0; padding: .5rem 1rem 1rem; border-radius: 8px; border: 1px solid var(--spa-border); }
+        .entry { padding: .5rem 0; border-bottom: 1px solid var(--spa-border); }
+        @media (max-width: 720px) {
+          .form-grid { grid-template-columns: 1fr; }
+          .asset { grid-template-columns: 1fr 1fr; }
+          .asset-main { grid-column: 1 / -1; }
+        }
+      </style>
+      """
+
+   .. raw:: html
+
+      </details>
+
+
+
+.. py:data:: app
+
