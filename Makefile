@@ -27,6 +27,16 @@ build-js:
 
 build: build-js build-py  ## build the project
 
+CATALOG := button checkbox switch tabs textfield theme
+
+.PHONY: catalog
+catalog:  ## regenerate the typed catalog from the bundled Spectrum packages' manifests
+	cd js; pnpm manifests
+	for pkg in $(CATALOG); do \
+		python -m spaday.cem spaday_spectrum/manifests/$$pkg.json --source @spectrum-web-components/$$pkg -o spaday_spectrum/$$pkg.py || exit 1; \
+	done
+	python -m ruff format spaday_spectrum
+
 .PHONY: install
 install:  ## install python library
 	uv pip install .

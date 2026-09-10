@@ -1,0 +1,131 @@
+{
+  "@spectrum-web-components/base": {
+    "modules": [
+      {
+        "kind": "javascript-module",
+        "path": "src/Base.ts",
+        "declarations": [{ "kind": "class", "name": "SpectrumElement" }]
+      },
+      {
+        "kind": "javascript-module",
+        "path": "src/sizedMixin.ts",
+        "declarations": [
+          {
+            "kind": "mixin",
+            "name": "SizedMixin",
+            "attributes": [
+              {
+                "name": "size",
+                "type": {
+                  "text": "'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'"
+                },
+                "fieldName": "size"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "@spectrum-web-components/shared": {
+    "modules": [
+      {
+        "kind": "javascript-module",
+        "path": "src/focusable.ts",
+        "declarations": [
+          {
+            "kind": "class",
+            "name": "Focusable",
+            "attributes": [
+              {
+                "name": "disabled",
+                "type": { "text": "boolean" },
+                "fieldName": "disabled"
+              },
+              {
+                "name": "autofocus",
+                "type": { "text": "boolean" },
+                "fieldName": "autofocus"
+              },
+              {
+                "name": "tabindex",
+                "type": { "text": "number" },
+                "fieldName": "tabIndex"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "javascript-module",
+        "path": "src/like-anchor.ts",
+        "declarations": [
+          {
+            "kind": "mixin",
+            "name": "LikeAnchor",
+            "attributes": [
+              {
+                "name": "download",
+                "type": { "text": "string" },
+                "fieldName": "download"
+              },
+              {
+                "name": "label",
+                "type": { "text": "string" },
+                "fieldName": "label"
+              },
+              {
+                "name": "href",
+                "type": { "text": "string" },
+                "fieldName": "href"
+              },
+              {
+                "name": "target",
+                "type": { "text": "'_blank' | '_parent' | '_self' | '_top'" },
+                "fieldName": "target"
+              },
+              {
+                "name": "referrerpolicy",
+                "type": {
+                  "text": "'no-referrer' | 'no-referrer-when-downgrade' | 'origin' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url'"
+                },
+                "fieldName": "referrerpolicy"
+              },
+              {
+                "name": "rel",
+                "type": { "text": "string" },
+                "fieldName": "rel"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "javascript-module",
+        "path": "src/observe-slot-text.ts",
+        "declarations": [{ "kind": "mixin", "name": "ObserveSlotText" }]
+      },
+      {
+        "kind": "javascript-module",
+        "path": "src/observe-slot-presence.ts",
+        "declarations": [{ "kind": "mixin", "name": "ObserveSlotPresence" }]
+      },
+      {
+        "kind": "javascript-module",
+        "path": "src/focus-visible.ts",
+        "declarations": [
+          { "kind": "mixin", "name": "FocusVisiblePolyfillMixin" }
+        ]
+      }
+    ]
+  },
+  "@spectrum-web-components/help-text": {
+    "modules": [
+      {
+        "kind": "javascript-module",
+        "path": "src/manage-help-text.ts",
+        "declarations": [{ "kind": "mixin", "name": "ManageHelpText" }]
+      }
+    ]
+  }
+}

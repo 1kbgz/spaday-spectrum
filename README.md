@@ -52,9 +52,16 @@ Save this as `app.py`, then run `pip install spaday-spectrum starlette uvicorn` 
 Installing this project registers the `spectrum` entry point with spaday. The equivalent explicit
 forms are `packages=[spaday_spectrum.package]` and `packages=["spaday_spectrum:package"]`.
 
-The first release pins the six individual Spectrum packages to `1.11.2`. It deliberately avoids the
-full `@spectrum-web-components/bundle`; more components should be added from concrete application needs
-and generated from their published Custom Elements Manifests.
+The package pins six individual Spectrum packages to `1.12.2`. It deliberately avoids the full
+`@spectrum-web-components/bundle`; more components should be added from concrete application needs.
+
+The typed classes are generated from those packages' Custom Elements Manifests with `make catalog`.
+Spectrum publishes one package per component, and a published manifest leaves out what an element
+inherits from another package — `size`, `disabled`, `href`, and on `sp-switch` even `checked`.
+`js/tools/manifests.mjs` resolves each element's superclass and mixins through the manifests of the
+packages that declare them and writes the result to `spaday_spectrum/manifests/`, which the classes
+are generated from. `base` and `shared` publish no manifest at all, so the few declarations needed
+from them are transcribed in `js/tools/unpublished.json`; the tool fails on any class neither covers.
 
 > [!NOTE]
 > This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).

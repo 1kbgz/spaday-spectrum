@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/Switch.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Switch",
+          "slots": [
+            {
+              "description": "text label of the Switch",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "emphasized",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "emphasized",
+              "reflects": true
+            }
+          ],
+          "events": [
+            {
+              "description": "Announces a change in the `checked` property of a Switch",
+              "name": "change"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "emphasized",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "emphasized"
+            },
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "checked",
+              "inheritedFrom": {
+                "name": "CheckboxMixin",
+                "module": "src/CheckboxMixin.ts"
+              }
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "name",
+              "inheritedFrom": {
+                "name": "CheckboxMixin",
+                "module": "src/CheckboxMixin.ts"
+              }
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "readonly",
+              "inheritedFrom": {
+                "name": "CheckboxMixin",
+                "module": "src/CheckboxMixin.ts"
+              }
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "disabled",
+              "inheritedFrom": {
+                "name": "Focusable",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "autofocus",
+              "inheritedFrom": {
+                "name": "Focusable",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "tabindex",
+              "type": {
+                "text": "number"
+              },
+              "fieldName": "tabIndex",
+              "inheritedFrom": {
+                "name": "Focusable",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'"
+              },
+              "fieldName": "size",
+              "inheritedFrom": {
+                "name": "SizedMixin",
+                "package": "@spectrum-web-components/base"
+              }
+            }
+          ],
+          "mixins": [
+            {
+              "name": "SizedMixin",
+              "package": "@spectrum-web-components/base"
+            }
+          ],
+          "superclass": {
+            "name": "CheckboxBase",
+            "package": "@spectrum-web-components/checkbox/src/CheckboxBase.js"
+          },
+          "tagName": "sp-switch",
+          "customElement": true
+        }
+      ]
+    }
+  ]
+}

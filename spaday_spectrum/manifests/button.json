@@ -1,0 +1,1624 @@
+{
+  "schemaVersion": "1.0.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/Button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Button",
+          "slots": [
+            {
+              "description": "text label of the Button",
+              "name": "",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.ts"
+              }
+            },
+            {
+              "description": "The icon to use for Button",
+              "name": "icon",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.ts"
+              }
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "pendingLabel",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "default": "'Pending'",
+              "attribute": "pending-label"
+            },
+            {
+              "kind": "field",
+              "name": "pending",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "pending",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pendingStateController",
+              "type": {
+                "text": "PendingStateController<this>"
+              },
+              "privacy": "public",
+              "default": "new PendingStateController(this)"
+            },
+            {
+              "kind": "method",
+              "name": "click",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "ButtonVariants"
+              },
+              "privacy": "public",
+              "description": "The visual variant to apply to this button.",
+              "attribute": "variant"
+            },
+            {
+              "kind": "field",
+              "name": "_variant",
+              "type": {
+                "text": "ButtonVariants"
+              },
+              "privacy": "private",
+              "default": "'accent'"
+            },
+            {
+              "kind": "field",
+              "name": "staticColor",
+              "type": {
+                "text": "'black' | 'white' | undefined"
+              },
+              "privacy": "public",
+              "description": "The static color variant to use for this button.",
+              "attribute": "static-color",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "treatment",
+              "type": {
+                "text": "ButtonTreatments"
+              },
+              "privacy": "public",
+              "default": "'fill'",
+              "description": "The visual treatment to apply to this button.",
+              "deprecated": "The `treatment` property is deprecated and will be replaced by\n`fill-style` in a future release.",
+              "attribute": "treatment",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "quiet",
+              "privacy": "public",
+              "description": "Style this button to be less obvious.",
+              "deprecated": "The `quiet` property is deprecated and will be removed in a\nfuture release.",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "quiet"
+            },
+            {
+              "kind": "field",
+              "name": "noWrap",
+              "privacy": "public",
+              "description": "Disables text wrapping within the button component's label.\nPlease note that this option is not a part of the design specification\nand should be used carefully, with consideration of this overflow behavior\nand the readability of the button's content.",
+              "deprecated": "The `no-wrap` attribute is deprecated and will be replaced by\n`truncate` in a future release.",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "no-wrap",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "_noWrap",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "method",
+              "name": "renderButton",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "active",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "'button' | 'submit' | 'reset'"
+              },
+              "privacy": "public",
+              "default": "'button'",
+              "description": "The default behavior of the button.\nPossible values are: `button` (default), `submit`, and `reset`.",
+              "attribute": "type",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "anchorElement",
+              "type": {
+                "text": "HTMLAnchorElement"
+              },
+              "privacy": "private",
+              "description": "HTML anchor element that component clicks by proxy",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "focusElement",
+              "type": {
+                "text": "HTMLElement"
+              },
+              "privacy": "public",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hasLabel",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "protected",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "buttonContent",
+              "type": {
+                "text": "TemplateResult[]"
+              },
+              "privacy": "protected",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleClickCapture",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void | boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "proxyFocus",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "shouldProxyClick",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "optional": true,
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderAnchor",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleKeydown",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleKeypress",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyup",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "manageAnchor",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "warnLinkAPIDeprecation",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "pending-label",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Pending'",
+              "fieldName": "pendingLabel"
+            },
+            {
+              "name": "pending",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "pending"
+            },
+            {
+              "name": "variant",
+              "type": {
+                "text": "ButtonVariants"
+              },
+              "description": "The visual variant to apply to this button.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "static-color",
+              "type": {
+                "text": "'black' | 'white' | undefined"
+              },
+              "description": "The static color variant to use for this button.",
+              "fieldName": "staticColor"
+            },
+            {
+              "name": "treatment",
+              "type": {
+                "text": "ButtonTreatments"
+              },
+              "default": "'fill'",
+              "description": "The visual treatment to apply to this button.",
+              "deprecated": "The `treatment` property is deprecated and will be replaced by\n`fill-style` in a future release.",
+              "fieldName": "treatment"
+            },
+            {
+              "name": "quiet",
+              "description": "Style this button to be less obvious.",
+              "deprecated": "The `quiet` property is deprecated and will be removed in a\nfuture release.",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "quiet"
+            },
+            {
+              "name": "no-wrap",
+              "description": "Disables text wrapping within the button component's label.\nPlease note that this option is not a part of the design specification\nand should be used carefully, with consideration of this overflow behavior\nand the readability of the button's content.",
+              "deprecated": "The `no-wrap` attribute is deprecated and will be replaced by\n`truncate` in a future release.",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "noWrap"
+            },
+            {
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "active",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.ts"
+              }
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "'button' | 'submit' | 'reset'"
+              },
+              "default": "'button'",
+              "description": "The default behavior of the button.\nPossible values are: `button` (default), `submit`, and `reset`.",
+              "fieldName": "type",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.ts"
+              }
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "disabled",
+              "inheritedFrom": {
+                "name": "Focusable",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "autofocus",
+              "inheritedFrom": {
+                "name": "Focusable",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "tabindex",
+              "type": {
+                "text": "number"
+              },
+              "fieldName": "tabIndex",
+              "inheritedFrom": {
+                "name": "Focusable",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "download",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "download",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "label",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "href",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top'"
+              },
+              "fieldName": "target",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "referrerpolicy",
+              "type": {
+                "text": "'no-referrer' | 'no-referrer-when-downgrade' | 'origin' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url'"
+              },
+              "fieldName": "referrerpolicy",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "rel",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'"
+              },
+              "fieldName": "size",
+              "inheritedFrom": {
+                "name": "SizedMixin",
+                "package": "@spectrum-web-components/base"
+              }
+            }
+          ],
+          "mixins": [
+            {
+              "name": "SizedMixin",
+              "package": "@spectrum-web-components/base"
+            }
+          ],
+          "superclass": {
+            "name": "ButtonBase",
+            "module": "/src/ButtonBase.js"
+          },
+          "tagName": "sp-button",
+          "customElement": true,
+          "events": []
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/ClearButton.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ClearButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "public",
+              "description": "An accessible label that describes the component.\nIt will be applied to aria-label, but not visually rendered.\nThis attribute is required for clear buttons.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "quiet",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "quiet",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "privacy": "public",
+              "description": "The visual variant to apply to this button.",
+              "deprecated": "Use `static-color='white'` instead.",
+              "type": {
+                "text": "'overBackground' | undefined"
+              },
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "_variant",
+              "type": {
+                "text": "'overBackground' | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "staticColor",
+              "type": {
+                "text": "'white' | undefined"
+              },
+              "privacy": "public",
+              "description": "The visual variant to apply to this button.",
+              "attribute": "static-color",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "buttonContent",
+              "type": {
+                "text": "TemplateResult[]"
+              },
+              "privacy": "protected",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "active",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "'button' | 'submit' | 'reset'"
+              },
+              "privacy": "public",
+              "default": "'button'",
+              "description": "The default behavior of the button.\nPossible values are: `button` (default), `submit`, and `reset`.",
+              "attribute": "type",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "anchorElement",
+              "type": {
+                "text": "HTMLAnchorElement"
+              },
+              "privacy": "private",
+              "description": "HTML anchor element that component clicks by proxy",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "focusElement",
+              "type": {
+                "text": "HTMLElement"
+              },
+              "privacy": "public",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hasLabel",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "protected",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleClickCapture",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void | boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "proxyFocus",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "shouldProxyClick",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "optional": true,
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderAnchor",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderButton",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleKeydown",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleKeypress",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyup",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "manageAnchor",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "warnLinkAPIDeprecation",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "An accessible label that describes the component.\nIt will be applied to aria-label, but not visually rendered.\nThis attribute is required for clear buttons.",
+              "name": "label",
+              "fieldName": "label"
+            },
+            {
+              "name": "quiet",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "quiet"
+            },
+            {
+              "name": "variant",
+              "description": "The visual variant to apply to this button.",
+              "deprecated": "Use `static-color='white'` instead.",
+              "type": {
+                "text": "'overBackground' | undefined"
+              },
+              "fieldName": "variant"
+            },
+            {
+              "name": "static-color",
+              "type": {
+                "text": "'white' | undefined"
+              },
+              "description": "The visual variant to apply to this button.",
+              "fieldName": "staticColor"
+            },
+            {
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "active",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.ts"
+              }
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "'button' | 'submit' | 'reset'"
+              },
+              "default": "'button'",
+              "description": "The default behavior of the button.\nPossible values are: `button` (default), `submit`, and `reset`.",
+              "fieldName": "type",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.ts"
+              }
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "disabled",
+              "inheritedFrom": {
+                "name": "Focusable",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "autofocus",
+              "inheritedFrom": {
+                "name": "Focusable",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "tabindex",
+              "type": {
+                "text": "number"
+              },
+              "fieldName": "tabIndex",
+              "inheritedFrom": {
+                "name": "Focusable",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "download",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "download",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "href",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top'"
+              },
+              "fieldName": "target",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "referrerpolicy",
+              "type": {
+                "text": "'no-referrer' | 'no-referrer-when-downgrade' | 'origin' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url'"
+              },
+              "fieldName": "referrerpolicy",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "rel",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'"
+              },
+              "fieldName": "size",
+              "inheritedFrom": {
+                "name": "SizedMixin",
+                "package": "@spectrum-web-components/base"
+              }
+            }
+          ],
+          "mixins": [
+            {
+              "name": "SizedMixin",
+              "package": "@spectrum-web-components/base"
+            }
+          ],
+          "superclass": {
+            "name": "StyledButton",
+            "module": "/src/StyledButton.js"
+          },
+          "tagName": "sp-clear-button",
+          "customElement": true,
+          "slots": [
+            {
+              "description": "text content to be displayed in the Button element",
+              "name": "",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.ts"
+              }
+            },
+            {
+              "description": "icon element(s) to display at the start of the button",
+              "name": "icon",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.ts"
+              }
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/CloseButton.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "CloseButton",
+          "slots": [
+            {
+              "description": "text label of the Close Button",
+              "name": "",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.ts"
+              }
+            },
+            {
+              "description": "icon element(s) to display at the start of the button",
+              "name": "icon",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.ts"
+              }
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "ButtonStaticColors | ''"
+              },
+              "privacy": "public",
+              "default": "''",
+              "description": "The visual variant to apply to this button.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "staticColor",
+              "type": {
+                "text": "'black' | 'white' | undefined"
+              },
+              "privacy": "public",
+              "attribute": "static-color",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "buttonContent",
+              "type": {
+                "text": "TemplateResult[]"
+              },
+              "privacy": "protected",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "public",
+              "default": "false",
+              "attribute": "active",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "'button' | 'submit' | 'reset'"
+              },
+              "privacy": "public",
+              "default": "'button'",
+              "description": "The default behavior of the button.\nPossible values are: `button` (default), `submit`, and `reset`.",
+              "attribute": "type",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "anchorElement",
+              "type": {
+                "text": "HTMLAnchorElement"
+              },
+              "privacy": "private",
+              "description": "HTML anchor element that component clicks by proxy",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "focusElement",
+              "type": {
+                "text": "HTMLElement"
+              },
+              "privacy": "public",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hasLabel",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "protected",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleClickCapture",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void | boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "proxyFocus",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "shouldProxyClick",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "optional": true,
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderAnchor",
+              "privacy": "public",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderButton",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleKeydown",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleKeypress",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyup",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "manageAnchor",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "warnLinkAPIDeprecation",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "ButtonStaticColors | ''"
+              },
+              "default": "''",
+              "description": "The visual variant to apply to this button.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "static-color",
+              "type": {
+                "text": "'black' | 'white' | undefined"
+              },
+              "fieldName": "staticColor"
+            },
+            {
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "active",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.ts"
+              }
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "'button' | 'submit' | 'reset'"
+              },
+              "default": "'button'",
+              "description": "The default behavior of the button.\nPossible values are: `button` (default), `submit`, and `reset`.",
+              "fieldName": "type",
+              "inheritedFrom": {
+                "name": "ButtonBase",
+                "module": "src/ButtonBase.ts"
+              }
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "disabled",
+              "inheritedFrom": {
+                "name": "Focusable",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "autofocus",
+              "inheritedFrom": {
+                "name": "Focusable",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "tabindex",
+              "type": {
+                "text": "number"
+              },
+              "fieldName": "tabIndex",
+              "inheritedFrom": {
+                "name": "Focusable",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "download",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "download",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "label",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "href",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top'"
+              },
+              "fieldName": "target",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "referrerpolicy",
+              "type": {
+                "text": "'no-referrer' | 'no-referrer-when-downgrade' | 'origin' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url'"
+              },
+              "fieldName": "referrerpolicy",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "rel",
+              "inheritedFrom": {
+                "name": "LikeAnchor",
+                "package": "@spectrum-web-components/shared"
+              }
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'"
+              },
+              "fieldName": "size",
+              "inheritedFrom": {
+                "name": "SizedMixin",
+                "package": "@spectrum-web-components/base"
+              }
+            }
+          ],
+          "mixins": [
+            {
+              "name": "SizedMixin",
+              "package": "@spectrum-web-components/base"
+            }
+          ],
+          "superclass": {
+            "name": "StyledButton",
+            "module": "/src/StyledButton.js"
+          },
+          "tagName": "sp-close-button",
+          "customElement": true,
+          "events": []
+        }
+      ]
+    }
+  ]
+}
