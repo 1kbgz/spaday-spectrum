@@ -11,7 +11,7 @@ from .tabs import *
 from .textfield import *
 from .theme import *
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 # the exact version of each JS library the package serves, written by its JS build
 _VERSIONS = Path(__file__).parent / "extension" / "versions.json"
