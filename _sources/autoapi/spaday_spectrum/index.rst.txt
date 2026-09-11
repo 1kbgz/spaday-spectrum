@@ -25,6 +25,7 @@ Attributes
 .. autoapisummary::
 
    spaday_spectrum.__version__
+   spaday_spectrum._VERSIONS
    spaday_spectrum.package
 
 
@@ -305,6 +306,8 @@ Package Contents
 .. py:data:: __version__
    :value: '0.1.0'
 
+
+.. py:data:: _VERSIONS
 
 .. py:data:: package
 

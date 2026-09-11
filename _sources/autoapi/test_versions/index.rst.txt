@@ -1,0 +1,29 @@
+test_versions
+=============
+
+.. py:module:: test_versions
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   test_versions.PACKAGE_JSON
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   test_versions.test_the_package_records_the_js_versions_it_serves
+
+
+Module Contents
+---------------
+
+.. py:data:: PACKAGE_JSON
+
+.. py:function:: test_the_package_records_the_js_versions_it_serves()
+
