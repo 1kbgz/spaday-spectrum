@@ -1,3 +1,6 @@
+// the guard must execute before the Spectrum imports register their elements
+import { restoreDefine } from "./define-guard";
+import { version } from "@spectrum-web-components/theme/package.json";
 import "@spectrum-web-components/theme/sp-theme.js";
 import "@spectrum-web-components/theme/theme-light.js";
 import "@spectrum-web-components/theme/theme-dark.js";
@@ -13,3 +16,17 @@ import "@spectrum-web-components/tabs/sp-tab-panel.js";
 import "@spectrum-web-components/tabs/sp-tabs.js";
 import "@spectrum-web-components/tabs/sp-tabs-overflow.js";
 import "@spectrum-web-components/textfield/sp-textfield.js";
+
+restoreDefine(`@spectrum-web-components ${version}`, [
+  "sp-theme",
+  "sp-button",
+  "sp-clear-button",
+  "sp-close-button",
+  "sp-checkbox",
+  "sp-switch",
+  "sp-tab",
+  "sp-tab-panel",
+  "sp-tabs",
+  "sp-tabs-overflow",
+  "sp-textfield",
+]);
