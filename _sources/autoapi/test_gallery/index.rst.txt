@@ -1,0 +1,28 @@
+test_gallery
+============
+
+.. py:module:: test_gallery
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   test_gallery._tags
+   test_gallery.test_gallery_shows_every_generated_component_with_a_snippet
+   test_gallery.test_python_snippets_highlight_comments
+   test_gallery.test_gallery_app_serves_the_component_tree
+
+
+Module Contents
+---------------
+
+.. py:function:: _tags(value)
+
+.. py:function:: test_gallery_shows_every_generated_component_with_a_snippet()
+
+.. py:function:: test_python_snippets_highlight_comments()
+
+.. py:function:: test_gallery_app_serves_the_component_tree()
+

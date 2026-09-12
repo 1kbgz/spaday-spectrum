@@ -201,11 +201,13 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="autoapi/index.html">API Reference</a><input aria-label="Toggle navigation of API Reference" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/test_all/index.html">test_all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/test_example/index.html">test_example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/test_gallery/index.html">test_gallery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/test_versions/index.html">test_versions</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="autoapi/spaday_spectrum/index.html">spaday_spectrum</a><input aria-label="Toggle navigation of spaday_spectrum" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/button/index.html">spaday_spectrum.button</a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/checkbox/index.html">spaday_spectrum.checkbox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/example/index.html">spaday_spectrum.example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/gallery/index.html">spaday_spectrum.gallery</a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/switch/index.html">spaday_spectrum.switch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/tabs/index.html">spaday_spectrum.tabs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/textfield/index.html">spaday_spectrum.textfield</a></li>
@@ -261,7 +263,7 @@
 <a class="reference external" href="https://codecov.io/gh/1kbgz/spaday-spectrum"><img alt="codecov" src="https://codecov.io/gh/1kbgz/spaday-spectrum/branch/main/graph/badge.svg" /></a>
 <a class="reference external" href="https://github.com/1kbgz/spaday-spectrum"><img alt="License" src="https://img.shields.io/github/license/1kbgz/spaday-spectrum" /></a>
 <a class="reference external" href="https://pypi.python.org/pypi/spaday-spectrum"><img alt="PyPI" src="https://img.shields.io/pypi/v/spaday-spectrum.svg" /></a></p>
-<p><a class="reference download internal" download="" href="_downloads/97d2962b7f7f8ee8993d11362e8c9d8b/example.py"><span class="xref download myst"><img alt="Preview of spectrum components in spaday rendering a review board" src="https://raw.githubusercontent.com/1kbgz/spaday-spectrum/main/docs/img/preview.webp" /></span></a></p>
+<p><a class="reference external" href="https://1kbgz.github.io/spaday-spectrum/lite/"><img alt="Preview of Spectrum components in spaday rendering a review board" src="https://raw.githubusercontent.com/1kbgz/spaday-spectrum/main/docs/img/preview.webp" /></a></p>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">spaday-spectrum</span></code> provides generated Python bindings and a self-contained registration bundle for a
@@ -314,18 +316,28 @@ packages that declare them and writes the result to <code class="docutils litera
 are generated from. <code class="docutils literal notranslate"><span class="pre">base</span></code> and <code class="docutils literal notranslate"><span class="pre">shared</span></code> publish no manifest at all, so the few declarations needed
 from them are transcribed in <code class="docutils literal notranslate"><span class="pre">js/tools/unpublished.json</span></code>; the tool fails on any class neither covers.</p>
 </section>
-<section id="run-the-local-example">
-<h2>Run the local example<a class="headerlink" href="#run-the-local-example" title="Link to this heading">¶</a></h2>
+<section id="browser-examples">
+<h2>Browser examples<a class="headerlink" href="#browser-examples" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://1kbgz.github.io/spaday-spectrum/lite/">Open the standard app</a> (<a class="reference download internal" download="" href="_downloads/97d2962b7f7f8ee8993d11362e8c9d8b/example.py"><span class="xref download myst">source</span></a>).</p></li>
+<li><p><a class="reference external" href="https://1kbgz.github.io/spaday-spectrum/lite/?example=gallery">Open the complete component gallery</a> (<a class="reference download internal" download="" href="_downloads/ba4129d4ec6a4a2d5bff41bcecbf45f8/gallery.py"><span class="xref download myst">source</span></a>).</p></li>
+</ul>
+<p>Both run Python locally through Pyodide; no install or server is required.</p>
+</section>
+<section id="run-examples-locally">
+<h2>Run examples locally<a class="headerlink" href="#run-examples-locally" title="Link to this heading">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">".[examples]"</span>
 python<span class="w"> </span>-m<span class="w"> </span>spaday_spectrum.example
+python<span class="w"> </span>-m<span class="w"> </span>spaday_spectrum.gallery
 </pre></div>
 </div>
-<p>Open <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8028</span></code> for the <a class="reference download internal" download="" href="_downloads/97d2962b7f7f8ee8993d11362e8c9d8b/example.py"><span class="xref download myst">review board</span></a>: assets streamed from
-Python over transports and approved or sent back through Python endpoints, an activity feed, a brief
-form of text fields, checkboxes and a switch bound to spaday state and checked by the server, a pending
-button while it files, tabs and panels driven from the store, close and clear buttons, and switches for
-Spectrum’s dark color and large scale. spaday-spectrum doesn’t map spaday’s shell palette yet, so the
-example maps it onto Spectrum’s tokens itself.</p>
+<p>Open <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8028</span></code> for the standard creative-review app or <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8029</span></code> for the
+component gallery. The standard app includes streamed assets, endpoint-backed review decisions and brief
+submission, an activity feed, bound fields and switches, tabs, dismissible feedback, and shared Spectrum
+color and scale state. The gallery includes every generated component in this focused package and a
+highlighted Python snippet for each family.</p>
+<p>Both pass the local package descriptor directly, so they do not install or resolve the integration from
+GitHub.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This library was generated using <a class="reference external" href="https://copier.readthedocs.io/en/stable/">copier</a> from the <a class="reference external" href="https://github.com/python-project-templates/base">Base Python Project Template repository</a>.</p>

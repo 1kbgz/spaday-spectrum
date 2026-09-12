@@ -13,6 +13,7 @@ Submodules
    /autoapi/spaday_spectrum/button/index
    /autoapi/spaday_spectrum/checkbox/index
    /autoapi/spaday_spectrum/example/index
+   /autoapi/spaday_spectrum/gallery/index
    /autoapi/spaday_spectrum/switch/index
    /autoapi/spaday_spectrum/tabs/index
    /autoapi/spaday_spectrum/textfield/index

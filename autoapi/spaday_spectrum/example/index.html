@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../../genindex.html"><link rel="search" title="Search" href="../../../search.html"><link rel="next" title="spaday_spectrum.switch" href="../switch/index.html"><link rel="prev" title="spaday_spectrum.checkbox" href="../checkbox/index.html">
+<link rel="index" title="Index" href="../../../genindex.html"><link rel="search" title="Search" href="../../../search.html"><link rel="next" title="spaday_spectrum.gallery" href="../gallery/index.html"><link rel="prev" title="spaday_spectrum.checkbox" href="../checkbox/index.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.12.19 -->
         <title>spaday_spectrum.example - spaday-spectrum v0.2.0</title>
@@ -201,11 +201,13 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../../index.html">API Reference</a><input aria-label="Toggle navigation of API Reference" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../test_all/index.html">test_all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../test_example/index.html">test_example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../test_gallery/index.html">test_gallery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../test_versions/index.html">test_versions</a></li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="../index.html">spaday_spectrum</a><input aria-label="Toggle navigation of spaday_spectrum" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../button/index.html">spaday_spectrum.button</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../checkbox/index.html">spaday_spectrum.checkbox</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">spaday_spectrum.example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gallery/index.html">spaday_spectrum.gallery</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../switch/index.html">spaday_spectrum.switch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tabs/index.html">spaday_spectrum.tabs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../textfield/index.html">spaday_spectrum.textfield</a></li>
@@ -295,7 +297,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#spaday_spectrum.example.styles" title="spaday_spectrum.example.styles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">styles</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#spaday_spectrum.example.app" title="spaday_spectrum.example.app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">app</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spaday_spectrum.example.initial_store" title="spaday_spectrum.example.initial_store"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initial_store</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spaday_spectrum.example.app" title="spaday_spectrum.example.app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">app</span></code></a></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -609,29 +614,42 @@ validated to form a valid model.</p>
 <span class="sd">  body { margin: 0; }</span>
 <span class="sd">  /* spaday-spectrum ships no mapping of spaday's shell palette yet, so the page maps it onto Spectrum's</span>
 <span class="sd">     tokens here, inside the theme that defines them */</span>
-<span class="sd">  sp-theme { display: block; font-family: var(--spectrum-sans-font-family-stack, system-ui); color: var(--spectrum-neutral-content-color-default);</span>
-<span class="sd">    background: var(--spectrum-background-layer-1-color);</span>
+<span class="sd">  sp-theme { display: block; min-height: 100vh; font-family: var(--spectrum-sans-font-family-stack, system-ui);</span>
+<span class="sd">    color: var(--spectrum-neutral-content-color-default);</span>
+<span class="sd">    background: radial-gradient(circle at 10% 0, color-mix(in srgb, var(--spectrum-accent-color-900) 13%, transparent), transparent 32rem),</span>
+<span class="sd">      var(--spectrum-background-layer-1-color);</span>
 <span class="sd">    --spa-surface: var(--spectrum-background-layer-2-color); --spa-surface-2: var(--spectrum-background-layer-1-color);</span>
 <span class="sd">    --spa-border: var(--spectrum-gray-300); --spa-muted: var(--spectrum-neutral-subdued-content-color-default);</span>
 <span class="sd">    --spa-accent: var(--spectrum-accent-content-color-default); --spa-success: var(--spectrum-positive-visual-color);</span>
 <span class="sd">    --spa-warning: var(--spectrum-notice-visual-color); --spa-danger: var(--spectrum-negative-visual-color); }</span>
-<span class="sd">  spa-nav { justify-content: space-between; }</span>
+<span class="sd">  spa-nav { justify-content: space-between; border-bottom: 1px solid var(--spa-border);</span>
+<span class="sd">    background: color-mix(in srgb, var(--spa-surface) 88%, transparent); backdrop-filter: blur(14px); }</span>
 <span class="sd">  /* a tab panel lays out its content as a flex row */</span>
 <span class="sd">  sp-tab-panel &gt; .panel { flex: 1; min-width: 0; }</span>
-<span class="sd">  .brand { font-size: 1.1rem; }</span>
-<span class="sd">  .page { box-sizing: border-box; width: 100%; max-width: 70rem; margin: 0 auto; padding: 1.5rem 1rem;</span>
-<span class="sd">    display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; gap: 1rem; }</span>
-<span class="sd">  .callout { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .5rem .5rem .5rem 1rem;</span>
-<span class="sd">    border-radius: 8px; border: 1px solid var(--spa-border); border-left: 4px solid var(--spa-accent); background: var(--spa-surface); }</span>
+<span class="sd">  .brand { font-size: 1.1rem; letter-spacing: -.015em; }</span>
+<span class="sd">  .page { box-sizing: border-box; width: 100%; max-width: 78rem; margin: 0 auto; padding: 3.5rem 1.25rem 5rem;</span>
+<span class="sd">    display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; gap: 1.2rem; }</span>
+<span class="sd">  .hero { padding: 1rem 0 1.35rem; }</span>
+<span class="sd">  .eyebrow { margin: 0; color: var(--spa-accent); font-size: .72rem; font-weight: 800; letter-spacing: .16em; }</span>
+<span class="sd">  .hero h1 { margin: .35rem 0 0; font-size: clamp(2.6rem, 6vw, 4.9rem); line-height: .98; letter-spacing: -.055em; }</span>
+<span class="sd">  .lede { max-width: 49rem; margin: 1rem 0; color: var(--spa-muted); font-size: 1.08rem; line-height: 1.6; }</span>
+<span class="sd">  .hero-meta { display: flex; flex-wrap: wrap; gap: .55rem; }</span>
+<span class="sd">  .hero-meta span { padding: .42rem .7rem; border: 1px solid var(--spa-border); border-radius: 999px;</span>
+<span class="sd">    background: color-mix(in srgb, var(--spa-surface) 90%, transparent); font-size: .85rem; }</span>
+<span class="sd">  .callout { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .6rem .6rem .6rem 1rem;</span>
+<span class="sd">    border-radius: 10px; border: 1px solid var(--spa-border); border-left: 4px solid var(--spa-accent); background: var(--spa-surface);</span>
+<span class="sd">    box-shadow: 0 10px 30px rgb(0 0 0 / .05); }</span>
 <span class="sd">  .panel { display: grid; gap: 1rem; padding-block: 1rem; }</span>
 <span class="sd">  .muted { color: var(--spa-muted); }</span>
 <span class="sd">  .stats { flex-wrap: wrap; }</span>
-<span class="sd">  .stat { flex: 1 1 12rem; display: grid; gap: .25rem; padding: 1rem; border-radius: 8px; border: 1px solid var(--spa-border); background: var(--spa-surface); }</span>
+<span class="sd">  .stat { flex: 1 1 14rem; display: grid; gap: .35rem; padding: 1.15rem; border-radius: 12px; border: 1px solid var(--spa-border);</span>
+<span class="sd">    background: var(--spa-surface); box-shadow: 0 12px 35px rgb(0 0 0 / .06); }</span>
 <span class="sd">  .stat span { color: var(--spa-muted); }</span>
-<span class="sd">  .stat strong { font-size: 1.75rem; }</span>
+<span class="sd">  .stat strong { font-size: 1.8rem; letter-spacing: -.035em; }</span>
 <span class="sd">  .assets, .activity { display: grid; gap: .5rem; }</span>
-<span class="sd">  .asset { display: grid; grid-template-columns: minmax(0, 1fr) 9rem auto auto; align-items: center; gap: 1rem; padding: .75rem 1rem;</span>
-<span class="sd">    border-radius: 8px; border: 1px solid var(--spa-border); background: var(--spa-surface); }</span>
+<span class="sd">  .asset { display: grid; grid-template-columns: minmax(0, 1fr) 9rem auto auto; align-items: center; gap: 1rem; padding: .85rem 1rem;</span>
+<span class="sd">    border-radius: 10px; border: 1px solid var(--spa-border); background: var(--spa-surface); transition: transform .15s ease, box-shadow .15s ease; }</span>
+<span class="sd">  .asset:hover { transform: translateY(-1px); box-shadow: 0 10px 28px rgb(0 0 0 / .07); }</span>
 <span class="sd">  .asset-main { display: grid; gap: .25rem; min-width: 0; }</span>
 <span class="sd">  .progress { height: 4px; border-radius: 2px; background: linear-gradient(to right, var(--spa-accent) var(--progress), var(--spa-border) 0); }</span>
 <span class="sd">  .status[data-status="Approved"] { color: var(--spa-success); }</span>
@@ -645,6 +663,9 @@ validated to form a valid model.</p>
 <span class="sd">  fieldset { display: flex; flex-wrap: wrap; gap: 1rem; margin: 0; padding: .5rem 1rem 1rem; border-radius: 8px; border: 1px solid var(--spa-border); }</span>
 <span class="sd">  .entry { padding: .5rem 0; border-bottom: 1px solid var(--spa-border); }</span>
 <span class="sd">  @media (max-width: 720px) {</span>
+<span class="sd">    spa-nav, spa-nav &gt; spa-row { flex-wrap: wrap; }</span>
+<span class="sd">    .page { padding: 2rem .75rem 3rem; }</span>
+<span class="sd">    .hero { padding-top: .5rem; }</span>
 <span class="sd">    .form-grid { grid-template-columns: 1fr; }</span>
 <span class="sd">    .asset { grid-template-columns: 1fr 1fr; }</span>
 <span class="sd">    .asset-main { grid-column: 1 / -1; }</span>
@@ -654,6 +675,11 @@ validated to form a valid model.</p>
 </pre></div>
 </div>
 </details></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="spaday_spectrum.example.initial_store">
+<span class="sig-prename descclassname"><span class="pre">spaday_spectrum.example.</span></span><span class="sig-name descname"><span class="pre">initial_store</span></span><a class="headerlink" href="#spaday_spectrum.example.initial_store" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="spaday_spectrum.example.app">
@@ -668,12 +694,12 @@ validated to form a valid model.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../switch/index.html">
+          <a class="next-page" href="../gallery/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">spaday_spectrum.switch</div>
+                <div class="title">spaday_spectrum.gallery</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -769,6 +795,7 @@ validated to form a valid model.</p>
 <li><a class="reference internal" href="#spaday_spectrum.example.activity_panel"><code class="docutils literal notranslate"><span class="pre">activity_panel</span></code></a></li>
 <li><a class="reference internal" href="#spaday_spectrum.example.page"><code class="docutils literal notranslate"><span class="pre">page</span></code></a></li>
 <li><a class="reference internal" href="#spaday_spectrum.example.styles"><code class="docutils literal notranslate"><span class="pre">styles</span></code></a></li>
+<li><a class="reference internal" href="#spaday_spectrum.example.initial_store"><code class="docutils literal notranslate"><span class="pre">initial_store</span></code></a></li>
 <li><a class="reference internal" href="#spaday_spectrum.example.app"><code class="docutils literal notranslate"><span class="pre">app</span></code></a></li>
 </ul>
 </li>

@@ -8,6 +8,7 @@ This page contains auto-generated API reference documentation [#f1]_.
 
    /autoapi/test_all/index
    /autoapi/test_example/index
+   /autoapi/test_gallery/index
    /autoapi/test_versions/index
    /autoapi/spaday_spectrum/index
 

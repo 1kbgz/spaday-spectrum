@@ -1,0 +1,135 @@
+spaday_spectrum.gallery
+=======================
+
+.. py:module:: spaday_spectrum.gallery
+
+.. autoapi-nested-parse::
+
+   Gallery of every Spectrum component wrapped by spaday-spectrum.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   spaday_spectrum.gallery.COMPONENT_MODULES
+   spaday_spectrum.gallery.COMPONENT_NAMES
+   spaday_spectrum.gallery.COMPONENT_SNIPPETS
+   spaday_spectrum.gallery.theme_actions
+   spaday_spectrum.gallery.fields
+   spaday_spectrum.gallery.selection
+   spaday_spectrum.gallery.navigation
+   spaday_spectrum.gallery.overflow
+   spaday_spectrum.gallery.page
+   spaday_spectrum.gallery.styles
+   spaday_spectrum.gallery.app
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   spaday_spectrum.gallery._snippet
+   spaday_spectrum.gallery._offsets
+   spaday_spectrum.gallery._code
+   spaday_spectrum.gallery._demo
+
+
+Module Contents
+---------------
+
+.. py:data:: COMPONENT_MODULES
+
+.. py:data:: COMPONENT_NAMES
+
+.. py:data:: COMPONENT_SNIPPETS
+   :type:  list[str]
+   :value: []
+
+
+.. py:function:: _snippet(names: str, body: str) -> str
+
+.. py:function:: _offsets(source: str) -> list[int]
+
+.. py:function:: _code(source: str)
+
+   Render dependency-free highlighted Python.
+
+
+.. py:function:: _demo(title: str, description: str, source: str, preview)
+
+.. py:data:: theme_actions
+
+.. py:data:: fields
+
+.. py:data:: selection
+
+.. py:data:: navigation
+
+.. py:data:: overflow
+
+.. py:data:: page
+
+.. py:data:: styles
+   :value: Multiline-String
+
+   .. raw:: html
+
+      <details><summary>Show Value</summary>
+
+   .. code-block:: python
+
+      """
+      <style>
+        body { margin: 0; }
+        sp-theme { display: block; min-height: 100vh; color: var(--spectrum-neutral-content-color-default);
+          background: radial-gradient(circle at 12% 0, color-mix(in srgb, var(--spectrum-accent-color-900) 13%, transparent), transparent 32rem),
+            var(--spectrum-background-layer-1-color); font-family: var(--spectrum-sans-font-family-stack, system-ui); }
+        .gallery-page { box-sizing: border-box; width: min(100%, 88rem); margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+        .hero { padding: 1.5rem 0 2.5rem; }
+        .eyebrow { margin: 0; color: var(--spectrum-accent-content-color-default); font-size: .72rem; font-weight: 800; letter-spacing: .16em; }
+        h1 { margin: .35rem 0 0; font-size: clamp(2.6rem, 6vw, 4.9rem); line-height: .98; letter-spacing: -.055em; }
+        .lede { max-width: 50rem; margin: 1rem 0; color: var(--spectrum-neutral-subdued-content-color-default); font-size: 1.08rem; line-height: 1.6; }
+        .hero-meta { display: flex; flex-wrap: wrap; gap: .55rem; }
+        .hero-meta span { padding: .42rem .7rem; border: 1px solid var(--spectrum-gray-300); border-radius: 999px;
+          background: color-mix(in srgb, var(--spectrum-background-layer-2-color) 90%, transparent); font-size: .85rem; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); gap: 1rem; align-items: start; }
+        .gallery-card { min-width: 0; padding: 1.15rem; border: 1px solid var(--spectrum-gray-300); border-radius: 12px;
+          background: var(--spectrum-background-layer-2-color); box-shadow: 0 18px 50px rgb(0 0 0 / .08); }
+        .demo-heading { display: flex; align-items: start; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+        .demo-heading > div { min-width: 0; }
+        .demo-heading h2 { margin: 0; font-size: 1.1rem; }
+        .demo-heading p { margin: .3rem 0 0; color: var(--spectrum-neutral-subdued-content-color-default); font-size: .88rem; line-height: 1.45; }
+        .language-pill { flex: 0 0 auto; padding: .25rem .5rem; border-radius: 999px; color: var(--spectrum-accent-content-color-default);
+          background: color-mix(in srgb, var(--spectrum-accent-color-900) 12%, transparent); font-size: .72rem; font-weight: 750; }
+        .preview { box-sizing: border-box; min-height: 9rem; margin-bottom: 1rem; padding: 1.25rem; overflow: auto;
+          border: 1px solid var(--spectrum-gray-300); border-radius: 10px; background: var(--spectrum-background-layer-1-color); }
+        .preview > * { max-width: 100%; }
+        .inline-preview { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+        .form-preview, .selection-preview { display: grid; gap: 1rem; }
+        .form-preview label { display: grid; gap: .35rem; color: var(--spectrum-neutral-subdued-content-color-default); font-size: .85rem; }
+        .form-preview sp-textfield { width: 100%; }
+        .overflow-demo { width: 17rem; max-width: 100%; }
+        .code-block { box-sizing: border-box; max-height: 19rem; margin: 0; padding: 1rem; overflow: auto; border-radius: 10px;
+          color: #dbeafe; background: #171a22; font: .78rem/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+          tab-size: 4; white-space: pre; }
+        .token-keyword { color: #c4b5fd; } .token-string { color: #86efac; } .token-number { color: #fcd34d; }
+        .token-comment { color: #94a3b8; font-style: italic; } .token-operator { color: #7dd3fc; }
+        footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--spectrum-gray-300);
+          color: var(--spectrum-neutral-subdued-content-color-default); font-size: .85rem; }
+        @media (max-width: 600px) { .gallery-page { padding: 2rem .75rem 3rem; } .hero { padding-top: .75rem; }
+          .preview { padding: .9rem; } }
+      </style>
+      """
+
+   .. raw:: html
+
+      </details>
+
+
+
+.. py:data:: app
+
