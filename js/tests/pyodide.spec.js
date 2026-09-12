@@ -3,6 +3,25 @@ import { expect, test } from "@playwright/test";
 
 const built = fs.existsSync("dist/lite/index.html");
 
+async function renderedComponentTags(page, prefix) {
+  return page.locator("body").evaluate((body, prefix) => {
+    const components = [...body.querySelectorAll("*")].filter((element) =>
+      element.localName.startsWith(prefix),
+    );
+    const tags = [...new Set(components.map((element) => element.localName))];
+    const unrendered = tags.filter(
+      (tag) =>
+        !components
+          .filter((element) => element.localName === tag)
+          .some((element) => {
+            const bounds = element.getBoundingClientRect();
+            return bounds.width > 0 && bounds.height > 0;
+          }),
+    );
+    return { count: tags.length, unrendered };
+  }, prefix);
+}
+
 async function waitForPython(page) {
   await page.waitForFunction(
     () =>
@@ -75,6 +94,9 @@ test("runs the complete gallery in Pyodide", async ({ page }) => {
   await expect(page.locator(".hero h1")).toHaveText("Component gallery");
   expect(await page.locator(".gallery-card").count()).toBe(5);
   await expect(page.locator("sp-tabs-overflow")).toBeVisible();
+  const rendered = await renderedComponentTags(page, "sp-");
+  expect(rendered.count).toBe(11);
+  expect(rendered.unrendered).toEqual([]);
   await expect(page.locator(".token-keyword").first()).toHaveText("from");
   await expectNoHorizontalOverflow(page);
   expect(errors).toEqual([]);
