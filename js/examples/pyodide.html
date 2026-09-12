@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>spaday-spectrum in Pyodide</title>
+    <style>
+      #pyodide-status {
+        position: sticky;
+        z-index: 10000;
+        top: 0;
+        box-sizing: border-box;
+        min-height: 3rem;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #d8d8d8;
+        color: #505050;
+        background: #fffffff2;
+        font:
+          14px/1.4 system-ui,
+          sans-serif;
+        backdrop-filter: blur(12px);
+      }
+      #pyodide-error {
+        margin: 1rem;
+        color: #b91c1c;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pyodide-status">Loading Python in the browser…</div>
+    <div id="example-root"></div>
+    <pre id="pyodide-error" hidden></pre>
+    <script type="module">
+      import {
+        connectStore,
+        init,
+        mount,
+        Store,
+      } from "./runtime/spaday/cdn/index.js";
+      import "./components/spectrum/cdn/index.js";
+      import * as transports from "./runtime/spaday/transports/cdn/index.js";
+
+      const status = document.querySelector("#pyodide-status");
+      const exampleName =
+        new URL(location.href).searchParams.get("example") === "gallery"
+          ? "gallery"
+          : "example";
+      document.title = `spaday-spectrum ${exampleName} in Pyodide`;
+      const pendingEndpoints = new Map();
+      let nextEndpointId = 0;
+      let receiveWires = () => {};
+
+      function fail(error) {
+        status.textContent = "Unable to start";
+        const output = document.querySelector("#pyodide-error");
+        output.hidden = false;
+        output.textContent = String(error);
+      }
+
+      try {
+        await init({ module_or_path: "./runtime/spaday/pkg/spaday_bg.wasm" });
+        if (exampleName === "example") {
+          await transports.wasm.default({
+            module_or_path:
+              "./runtime/spaday/transports/pkg/transports_bg.wasm",
+          });
+        }
+
+        const worker = new Worker(
+          `./pyodide-worker.js?example=${exampleName}`,
+          { type: "module" },
+        );
+        const nativeFetch = globalThis.fetch.bind(globalThis);
+        globalThis.fetch = async (input, options = {}) => {
+          const url = new URL(
+            input instanceof Request ? input.url : input,
+            location.href,
+          );
+          if (exampleName !== "example" || !url.pathname.startsWith("/api/"))
+            return nativeFetch(input, options);
+
+          const id = ++nextEndpointId;
+          const response = new Promise((resolve) => {
+            pendingEndpoints.set(id, resolve);
+          });
+          worker.postMessage({
+            type: "endpoint",
+            id,
+            path: url.pathname,
+            body: options.body ? JSON.parse(String(options.body)) : null,
+          });
+          return response;
+        };
+
+        worker.addEventListener("message", (event) => {
+          if (event.data.type === "status")
+            status.textContent = event.data.message;
+          if (event.data.type === "error") fail(event.data.message);
+          if (event.data.type === "wires") receiveWires(event.data.wires);
+          if (event.data.type === "endpoint") {
+            receiveWires(event.data.wires);
+            const resolve = pendingEndpoints.get(event.data.id);
+            if (resolve) {
+              pendingEndpoints.delete(event.data.id);
+              resolve(
+                new Response(JSON.stringify(event.data.body), {
+                  status: event.data.status,
+                  headers: { "content-type": "application/json" },
+                }),
+              );
+            }
+          }
+          if (event.data.type === "snapshot") {
+            const {
+              tree,
+              style,
+              store: initialStore,
+              wire,
+              wires,
+            } = event.data.payload;
+            document.head.insertAdjacentHTML("beforeend", style);
+            const store = new Store(initialStore);
+            if (wire) {
+              const client = new transports.Client();
+              const link = connectStore(
+                store,
+                client,
+                (frame) => worker.postMessage({ type: "wire", frame }),
+                transports,
+              );
+              receiveWires = (frames) => {
+                for (const frame of frames) link.receive(frame);
+              };
+              receiveWires(wires);
+              window.setInterval(
+                () => worker.postMessage({ type: "flush" }),
+                100,
+              );
+            }
+            mount(document.querySelector("#example-root"), tree, store);
+            status.textContent = `Ready · Python ${exampleName} running in this browser`;
+            document.documentElement.dataset.ready = "true";
+          }
+        });
+        worker.postMessage({ type: "start" });
+      } catch (error) {
+        fail(error);
+      }
+    </script>
+  </body>
+</html>

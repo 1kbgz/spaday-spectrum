@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/github/license/1kbgz/spaday-spectrum)](https://github.com/1kbgz/spaday-spectrum)
 [![PyPI](https://img.shields.io/pypi/v/spaday-spectrum.svg)](https://pypi.python.org/pypi/spaday-spectrum)
 
-[![Preview of spectrum components in spaday rendering a review board](https://raw.githubusercontent.com/1kbgz/spaday-spectrum/main/docs/img/preview.webp)](./spaday_spectrum/example.py)
+[![Preview of Spectrum components in spaday rendering a review board](https://raw.githubusercontent.com/1kbgz/spaday-spectrum/main/docs/img/preview.webp)](https://1kbgz.github.io/spaday-spectrum/lite/)
 
 ## Overview
 
@@ -65,19 +65,29 @@ packages that declare them and writes the result to `spaday_spectrum/manifests/`
 are generated from. `base` and `shared` publish no manifest at all, so the few declarations needed
 from them are transcribed in `js/tools/unpublished.json`; the tool fails on any class neither covers.
 
-## Run the local example
+## Browser examples
+
+- [Open the standard app](https://1kbgz.github.io/spaday-spectrum/lite/) ([source](spaday_spectrum/example.py)).
+- [Open the complete component gallery](https://1kbgz.github.io/spaday-spectrum/lite/?example=gallery) ([source](spaday_spectrum/gallery.py)).
+
+Both run Python locally through Pyodide; no install or server is required.
+
+## Run examples locally
 
 ```bash
 python -m pip install -e ".[examples]"
 python -m spaday_spectrum.example
+python -m spaday_spectrum.gallery
 ```
 
-Open `http://127.0.0.1:8028` for the [review board](spaday_spectrum/example.py): assets streamed from
-Python over transports and approved or sent back through Python endpoints, an activity feed, a brief
-form of text fields, checkboxes and a switch bound to spaday state and checked by the server, a pending
-button while it files, tabs and panels driven from the store, close and clear buttons, and switches for
-Spectrum's dark color and large scale. spaday-spectrum doesn't map spaday's shell palette yet, so the
-example maps it onto Spectrum's tokens itself.
+Open `http://127.0.0.1:8028` for the standard creative-review app or `http://127.0.0.1:8029` for the
+component gallery. The standard app includes streamed assets, endpoint-backed review decisions and brief
+submission, an activity feed, bound fields and switches, tabs, dismissible feedback, and shared Spectrum
+color and scale state. The gallery includes every generated component in this focused package and a
+highlighted Python snippet for each family.
+
+Both pass the local package descriptor directly, so they do not install or resolve the integration from
+GitHub.
 
 > [!NOTE]
 > This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
