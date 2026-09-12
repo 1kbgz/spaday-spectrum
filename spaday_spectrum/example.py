@@ -261,6 +261,22 @@ page = (
             ),
             Body(
                 Main(
+                    element(
+                        "header",
+                        element("p", class_="eyebrow").text("SPECTRUM STUDIO · CAMPAIGN OPS"),
+                        element("h1").text("Creative review"),
+                        element("p", class_="lede").text(
+                            "Move campaign assets from upload to approval with live Python state and Spectrum controls tuned for focused decisions."
+                        ),
+                        element(
+                            "div",
+                            element("span").text("11 typed elements"),
+                            element("span").text("Live asset stream"),
+                            element("span").text("Python decisions"),
+                            class_="hero-meta",
+                        ),
+                        class_="hero",
+                    ),
                     Show(
                         element(
                             "div",
@@ -297,29 +313,42 @@ styles = """
   body { margin: 0; }
   /* spaday-spectrum ships no mapping of spaday's shell palette yet, so the page maps it onto Spectrum's
      tokens here, inside the theme that defines them */
-  sp-theme { display: block; font-family: var(--spectrum-sans-font-family-stack, system-ui); color: var(--spectrum-neutral-content-color-default);
-    background: var(--spectrum-background-layer-1-color);
+  sp-theme { display: block; min-height: 100vh; font-family: var(--spectrum-sans-font-family-stack, system-ui);
+    color: var(--spectrum-neutral-content-color-default);
+    background: radial-gradient(circle at 10% 0, color-mix(in srgb, var(--spectrum-accent-color-900) 13%, transparent), transparent 32rem),
+      var(--spectrum-background-layer-1-color);
     --spa-surface: var(--spectrum-background-layer-2-color); --spa-surface-2: var(--spectrum-background-layer-1-color);
     --spa-border: var(--spectrum-gray-300); --spa-muted: var(--spectrum-neutral-subdued-content-color-default);
     --spa-accent: var(--spectrum-accent-content-color-default); --spa-success: var(--spectrum-positive-visual-color);
     --spa-warning: var(--spectrum-notice-visual-color); --spa-danger: var(--spectrum-negative-visual-color); }
-  spa-nav { justify-content: space-between; }
+  spa-nav { justify-content: space-between; border-bottom: 1px solid var(--spa-border);
+    background: color-mix(in srgb, var(--spa-surface) 88%, transparent); backdrop-filter: blur(14px); }
   /* a tab panel lays out its content as a flex row */
   sp-tab-panel > .panel { flex: 1; min-width: 0; }
-  .brand { font-size: 1.1rem; }
-  .page { box-sizing: border-box; width: 100%; max-width: 70rem; margin: 0 auto; padding: 1.5rem 1rem;
-    display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; gap: 1rem; }
-  .callout { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .5rem .5rem .5rem 1rem;
-    border-radius: 8px; border: 1px solid var(--spa-border); border-left: 4px solid var(--spa-accent); background: var(--spa-surface); }
+  .brand { font-size: 1.1rem; letter-spacing: -.015em; }
+  .page { box-sizing: border-box; width: 100%; max-width: 78rem; margin: 0 auto; padding: 3.5rem 1.25rem 5rem;
+    display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; gap: 1.2rem; }
+  .hero { padding: 1rem 0 1.35rem; }
+  .eyebrow { margin: 0; color: var(--spa-accent); font-size: .72rem; font-weight: 800; letter-spacing: .16em; }
+  .hero h1 { margin: .35rem 0 0; font-size: clamp(2.6rem, 6vw, 4.9rem); line-height: .98; letter-spacing: -.055em; }
+  .lede { max-width: 49rem; margin: 1rem 0; color: var(--spa-muted); font-size: 1.08rem; line-height: 1.6; }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: .55rem; }
+  .hero-meta span { padding: .42rem .7rem; border: 1px solid var(--spa-border); border-radius: 999px;
+    background: color-mix(in srgb, var(--spa-surface) 90%, transparent); font-size: .85rem; }
+  .callout { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .6rem .6rem .6rem 1rem;
+    border-radius: 10px; border: 1px solid var(--spa-border); border-left: 4px solid var(--spa-accent); background: var(--spa-surface);
+    box-shadow: 0 10px 30px rgb(0 0 0 / .05); }
   .panel { display: grid; gap: 1rem; padding-block: 1rem; }
   .muted { color: var(--spa-muted); }
   .stats { flex-wrap: wrap; }
-  .stat { flex: 1 1 12rem; display: grid; gap: .25rem; padding: 1rem; border-radius: 8px; border: 1px solid var(--spa-border); background: var(--spa-surface); }
+  .stat { flex: 1 1 14rem; display: grid; gap: .35rem; padding: 1.15rem; border-radius: 12px; border: 1px solid var(--spa-border);
+    background: var(--spa-surface); box-shadow: 0 12px 35px rgb(0 0 0 / .06); }
   .stat span { color: var(--spa-muted); }
-  .stat strong { font-size: 1.75rem; }
+  .stat strong { font-size: 1.8rem; letter-spacing: -.035em; }
   .assets, .activity { display: grid; gap: .5rem; }
-  .asset { display: grid; grid-template-columns: minmax(0, 1fr) 9rem auto auto; align-items: center; gap: 1rem; padding: .75rem 1rem;
-    border-radius: 8px; border: 1px solid var(--spa-border); background: var(--spa-surface); }
+  .asset { display: grid; grid-template-columns: minmax(0, 1fr) 9rem auto auto; align-items: center; gap: 1rem; padding: .85rem 1rem;
+    border-radius: 10px; border: 1px solid var(--spa-border); background: var(--spa-surface); transition: transform .15s ease, box-shadow .15s ease; }
+  .asset:hover { transform: translateY(-1px); box-shadow: 0 10px 28px rgb(0 0 0 / .07); }
   .asset-main { display: grid; gap: .25rem; min-width: 0; }
   .progress { height: 4px; border-radius: 2px; background: linear-gradient(to right, var(--spa-accent) var(--progress), var(--spa-border) 0); }
   .status[data-status="Approved"] { color: var(--spa-success); }
@@ -333,12 +362,33 @@ styles = """
   fieldset { display: flex; flex-wrap: wrap; gap: 1rem; margin: 0; padding: .5rem 1rem 1rem; border-radius: 8px; border: 1px solid var(--spa-border); }
   .entry { padding: .5rem 0; border-bottom: 1px solid var(--spa-border); }
   @media (max-width: 720px) {
+    spa-nav, spa-nav > spa-row { flex-wrap: wrap; }
+    .page { padding: 2rem .75rem 3rem; }
+    .hero { padding-top: .5rem; }
     .form-grid { grid-template-columns: 1fr; }
     .asset { grid-template-columns: 1fr 1fr; }
     .asset-main { grid-column: 1 / -1; }
   }
 </style>
 """
+
+initial_store = {
+    "dark": False,
+    "large": False,
+    "banner": True,
+    "tab": "assets",
+    "campaign": "Autumn launch",
+    "email": "",
+    "notes": "",
+    "channel_web": True,
+    "channel_social": True,
+    "channel_email": False,
+    "channel_print": False,
+    "launch_now": False,
+    "saving": False,
+    "brief": {},
+    "decision": {"body": {"message": ""}},
+}
 
 app = serve(
     page,
@@ -350,23 +400,7 @@ app = serve(
         Route("/api/assets/{id}/{decision}", decide, methods=["POST"]),
     ],
     background=[transports.autosync(server), stream_reviews()],
-    store={
-        "dark": False,
-        "large": False,
-        "banner": True,
-        "tab": "assets",
-        "campaign": "Autumn launch",
-        "email": "",
-        "notes": "",
-        "channel_web": True,
-        "channel_social": True,
-        "channel_email": False,
-        "channel_print": False,
-        "launch_now": False,
-        "saving": False,
-        "brief": {},
-        "decision": {"body": {"message": ""}},
-    },
+    store=initial_store,
     head=styles,
     title="spaday-spectrum example",
 )
