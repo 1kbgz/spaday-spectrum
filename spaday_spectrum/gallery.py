@@ -74,8 +74,6 @@ def _code(source: str):
             token_class = "operator"
         children.append(element("span", class_=f"token-{token_class}").text(token.string) if token_class else token.string)
         cursor = end
-    if cursor < len(source):
-        children.append(source[cursor:])
     return element("pre", element("code", *children), class_="code-block")
 
 

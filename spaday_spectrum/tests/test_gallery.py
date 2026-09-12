@@ -27,6 +27,14 @@ def test_gallery_shows_every_generated_component_with_a_snippet():
     assert snippet_names == expected_names
 
 
+def test_python_snippets_highlight_comments_and_keep_trailing_whitespace():
+    node = gallery._code("count = 3  # Ready\n  ").to_node()
+    children = node["slots"]["default"][0]["slots"]["default"]
+
+    assert any(child.get("props", {}).get("class", {}).get("Str") == "token-comment" for child in children)
+    assert children[-2]["props"]["textContent"]["Str"] == "  "
+
+
 def test_gallery_app_serves_the_component_tree():
     async def request():
         transport = httpx.ASGITransport(app=gallery.app)
