@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" shape-rendering="geometricPrecision" role="img" aria-label="spaday-spectrum">
+  <title>spaday-spectrum</title>
+  <defs>
+    <clipPath id="viewport-clip"><rect x="124" y="243" width="1006" height="854" rx="62"/></clipPath>
+    <clipPath id="prism-clip"><path d="M627 382 897 850H357Z"/></clipPath>
+  </defs>
+  <rect x="88" y="96" width="1078" height="1036" rx="108" fill="#0C4253"/>
+  <rect x="124" y="243" width="1006" height="854" rx="62" fill="#F2F3EF"/>
+  <circle cx="208" cy="175" r="25" fill="#FC6B47"/><circle cx="295" cy="175" r="25" fill="#AECEC3"/><circle cx="383" cy="175" r="25" fill="#F2F3EF"/>
+  <g clip-path="url(#viewport-clip)" stroke-linejoin="round" transform="translate(-65.7 -18.5) scale(1.06)">
+    <path d="m196 714 285-74 8 31-285 74Z" fill="#0C4253"/>
+    <path d="m758 608 302-169 18 31-307 171Z" fill="#FC6B47"/>
+    <path d="m780 648 330-10 1 34-331 10Z" fill="#0C4253"/>
+    <path d="m801 686 278 202-20 29-276-201Z" fill="#AECEC3"/>
+    <path d="M627 382 897 850H357Z" fill="#0C4253"/>
+    <path d="M466 660H788" fill="none" stroke="#F2F3EF" stroke-width="30" clip-path="url(#prism-clip)"/>
+  </g>
+</svg>

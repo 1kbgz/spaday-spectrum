@@ -1,4 +1,9 @@
-# spaday-spectrum
+<a href="https://github.com/1kbgz/spaday-spectrum">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/1kbgz/spaday-spectrum/raw/main/docs/img/logo-dark.webp?raw=true">
+    <img alt="spaday-spectrum logo, a prism splitting light inside a browser window" src="https://github.com/1kbgz/spaday-spectrum/raw/main/docs/img/logo-light.webp?raw=true" width="1200">
+  </picture>
+</a>
 
 [Spectrum](https://opensource.adobe.com/spectrum-web-components/) for [spaday](https://1kbgz.github.io/spaday/)
 
