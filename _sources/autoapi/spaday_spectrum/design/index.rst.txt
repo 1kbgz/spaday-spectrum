@@ -1,0 +1,24 @@
+spaday_spectrum.design
+======================
+
+.. py:module:: spaday_spectrum.design
+
+.. autoapi-nested-parse::
+
+   How Spectrum renders spaday's generic controls (:mod:`spaday.ui`).
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   spaday_spectrum.design.DESIGN
+
+
+Module Contents
+---------------
+
+.. py:data:: DESIGN
+

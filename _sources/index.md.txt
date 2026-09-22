@@ -36,6 +36,25 @@ focused first slice of Adobe Spectrum Web Components:
 - Checkbox and switch
 - Tabs, tab panels, and tabs overflow
 
+## Generic controls
+
+Select the `spectrum` design to render spaday's generic button, text input, text area, checkbox, and
+switch as Spectrum elements:
+
+```python
+from spaday import Button, Column, TextInput
+from spaday.backends.starlette import serve
+
+page = Column(
+    TextInput(label="Name").bind("value", "name", mode="two-way"),
+    Button(label="Save", intent="primary"),
+)
+app = serve(page, packages=["spectrum"], design="spectrum", store={"name": ""})
+```
+
+Controls outside this focused Spectrum package use spaday's marked native fallback. The package's
+shared conformance test covers both the Spectrum controls and those substitutions.
+
 ## Interactive example
 
 The textfield updates the greeting immediately, the checkbox switches Spectrum themes, and the button

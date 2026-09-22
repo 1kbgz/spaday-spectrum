@@ -12,6 +12,7 @@ Submodules
 
    /autoapi/spaday_spectrum/button/index
    /autoapi/spaday_spectrum/checkbox/index
+   /autoapi/spaday_spectrum/design/index
    /autoapi/spaday_spectrum/example/index
    /autoapi/spaday_spectrum/gallery/index
    /autoapi/spaday_spectrum/switch/index
@@ -25,9 +26,11 @@ Attributes
 
 .. autoapisummary::
 
+   spaday_spectrum.DESIGN
    spaday_spectrum.__version__
    spaday_spectrum._VERSIONS
    spaday_spectrum.package
+   spaday_spectrum.__all__
 
 
 Classes
@@ -142,6 +145,8 @@ Package Contents
 
    .. py:attribute:: schema
 
+
+.. py:data:: DESIGN
 
 .. py:class:: SpSwitch(*children: spaday.component.Child, key: str | None = None, emphasized: bool | None = None, checked: bool | None = None, name: str | None = None, readonly: bool | None = None, disabled: bool | None = None, autofocus: bool | None = None, tabindex: float | None = None, size: Literal['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl'] | None = None, **props: Any)
 
@@ -311,4 +316,6 @@ Package Contents
 .. py:data:: _VERSIONS
 
 .. py:data:: package
+
+.. py:data:: __all__
 

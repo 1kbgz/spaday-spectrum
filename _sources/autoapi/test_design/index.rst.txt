@@ -1,0 +1,34 @@
+test_design
+===========
+
+.. py:module:: test_design
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   test_design._props
+   test_design._find
+   test_design.test_find_walks_all_slots_and_reports_missing_tags
+   test_design.test_the_package_publishes_its_design
+   test_design.test_spectrum_controls_map_the_shared_contract
+   test_design.test_the_conformance_page_uses_native_fallbacks_for_missing_controls
+
+
+Module Contents
+---------------
+
+.. py:function:: _props(node: dict) -> dict
+
+.. py:function:: _find(node: dict, tag: str) -> dict
+
+.. py:function:: test_find_walks_all_slots_and_reports_missing_tags()
+
+.. py:function:: test_the_package_publishes_its_design()
+
+.. py:function:: test_spectrum_controls_map_the_shared_contract()
+
+.. py:function:: test_the_conformance_page_uses_native_fallbacks_for_missing_controls()
+

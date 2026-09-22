@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="test_versions" href="../test_versions/index.html"><link rel="prev" title="test_example" href="../test_example/index.html">
+<link rel="index" title="Index" href="../../genindex.html"><link rel="search" title="Search" href="../../search.html"><link rel="next" title="test_example" href="../test_example/index.html"><link rel="prev" title="test_all" href="../test_all/index.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.12.19 -->
-        <title>test_gallery - spaday-spectrum v0.2.0</title>
+        <title>test_design - spaday-spectrum v0.2.0</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -200,9 +200,9 @@
   <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input aria-label="Toggle navigation of API Reference" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../test_all/index.html">test_all</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../test_design/index.html">test_design</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">test_design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../test_example/index.html">test_example</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">test_gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../test_gallery/index.html">test_gallery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../test_versions/index.html">test_versions</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../spaday_spectrum/index.html">spaday_spectrum</a><input aria-label="Toggle navigation of spaday_spectrum" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../spaday_spectrum/button/index.html">spaday_spectrum.button</a></li>
@@ -238,7 +238,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/autoapi/test_gallery/index.rst.txt" title="View this page">
+  <a class="muted-link" href="../../_sources/autoapi/test_design/index.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -256,23 +256,29 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="module-test_gallery">
-<span id="test-gallery"></span><h1>test_gallery<a class="headerlink" href="#module-test_gallery" title="Link to this heading">¶</a></h1>
+          <section id="module-test_design">
+<span id="test-design"></span><h1>test_design<a class="headerlink" href="#module-test_design" title="Link to this heading">¶</a></h1>
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#test_gallery._tags" title="test_gallery._tags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_tags</span></code></a>(value)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#test_design._props" title="test_design._props"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_props</span></code></a>(→ dict)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#test_gallery.test_gallery_shows_every_generated_component_with_a_snippet" title="test_gallery.test_gallery_shows_every_generated_component_with_a_snippet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_gallery_shows_every_generated_component_with_a_snippet</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#test_design._find" title="test_design._find"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_find</span></code></a>(→ dict)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#test_gallery.test_python_snippets_highlight_comments" title="test_gallery.test_python_snippets_highlight_comments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_python_snippets_highlight_comments</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#test_design.test_find_walks_all_slots_and_reports_missing_tags" title="test_design.test_find_walks_all_slots_and_reports_missing_tags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_find_walks_all_slots_and_reports_missing_tags</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#test_gallery.test_gallery_app_serves_the_component_tree" title="test_gallery.test_gallery_app_serves_the_component_tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_gallery_app_serves_the_component_tree</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#test_design.test_the_package_publishes_its_design" title="test_design.test_the_package_publishes_its_design"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_the_package_publishes_its_design</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#test_design.test_spectrum_controls_map_the_shared_contract" title="test_design.test_spectrum_controls_map_the_shared_contract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_spectrum_controls_map_the_shared_contract</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#test_design.test_the_conformance_page_uses_native_fallbacks_for_missing_controls" title="test_design.test_the_conformance_page_uses_native_fallbacks_for_missing_controls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_the_conformance_page_uses_native_fallbacks_for_missing_controls</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -282,23 +288,33 @@
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="test_gallery._tags">
-<span class="sig-prename descclassname"><span class="pre">test_gallery.</span></span><span class="sig-name descname"><span class="pre">_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_gallery._tags" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="test_design._props">
+<span class="sig-prename descclassname"><span class="pre">test_design.</span></span><span class="sig-name descname"><span class="pre">_props</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#test_design._props" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="test_gallery.test_gallery_shows_every_generated_component_with_a_snippet">
-<span class="sig-prename descclassname"><span class="pre">test_gallery.</span></span><span class="sig-name descname"><span class="pre">test_gallery_shows_every_generated_component_with_a_snippet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_gallery.test_gallery_shows_every_generated_component_with_a_snippet" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="test_design._find">
+<span class="sig-prename descclassname"><span class="pre">test_design.</span></span><span class="sig-name descname"><span class="pre">_find</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#test_design._find" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="test_gallery.test_python_snippets_highlight_comments">
-<span class="sig-prename descclassname"><span class="pre">test_gallery.</span></span><span class="sig-name descname"><span class="pre">test_python_snippets_highlight_comments</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_gallery.test_python_snippets_highlight_comments" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="test_design.test_find_walks_all_slots_and_reports_missing_tags">
+<span class="sig-prename descclassname"><span class="pre">test_design.</span></span><span class="sig-name descname"><span class="pre">test_find_walks_all_slots_and_reports_missing_tags</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_design.test_find_walks_all_slots_and_reports_missing_tags" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="test_gallery.test_gallery_app_serves_the_component_tree">
-<span class="sig-prename descclassname"><span class="pre">test_gallery.</span></span><span class="sig-name descname"><span class="pre">test_gallery_app_serves_the_component_tree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_gallery.test_gallery_app_serves_the_component_tree" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="test_design.test_the_package_publishes_its_design">
+<span class="sig-prename descclassname"><span class="pre">test_design.</span></span><span class="sig-name descname"><span class="pre">test_the_package_publishes_its_design</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_design.test_the_package_publishes_its_design" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test_design.test_spectrum_controls_map_the_shared_contract">
+<span class="sig-prename descclassname"><span class="pre">test_design.</span></span><span class="sig-name descname"><span class="pre">test_spectrum_controls_map_the_shared_contract</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_design.test_spectrum_controls_map_the_shared_contract" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="test_design.test_the_conformance_page_uses_native_fallbacks_for_missing_controls">
+<span class="sig-prename descclassname"><span class="pre">test_design.</span></span><span class="sig-name descname"><span class="pre">test_the_conformance_page_uses_native_fallbacks_for_missing_controls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_design.test_the_conformance_page_uses_native_fallbacks_for_missing_controls" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -309,23 +325,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../test_versions/index.html">
+          <a class="next-page" href="../test_example/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">test_versions</div>
+                <div class="title">test_example</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../test_example/index.html">
+          <a class="prev-page" href="../test_all/index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">test_example</div>
+                <div class="title">test_all</div>
                 
               </div>
             </a>
@@ -359,13 +375,15 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">test_gallery</a><ul>
+<li><a class="reference internal" href="#">test_design</a><ul>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
-<li><a class="reference internal" href="#test_gallery._tags"><code class="docutils literal notranslate"><span class="pre">_tags()</span></code></a></li>
-<li><a class="reference internal" href="#test_gallery.test_gallery_shows_every_generated_component_with_a_snippet"><code class="docutils literal notranslate"><span class="pre">test_gallery_shows_every_generated_component_with_a_snippet()</span></code></a></li>
-<li><a class="reference internal" href="#test_gallery.test_python_snippets_highlight_comments"><code class="docutils literal notranslate"><span class="pre">test_python_snippets_highlight_comments()</span></code></a></li>
-<li><a class="reference internal" href="#test_gallery.test_gallery_app_serves_the_component_tree"><code class="docutils literal notranslate"><span class="pre">test_gallery_app_serves_the_component_tree()</span></code></a></li>
+<li><a class="reference internal" href="#test_design._props"><code class="docutils literal notranslate"><span class="pre">_props()</span></code></a></li>
+<li><a class="reference internal" href="#test_design._find"><code class="docutils literal notranslate"><span class="pre">_find()</span></code></a></li>
+<li><a class="reference internal" href="#test_design.test_find_walks_all_slots_and_reports_missing_tags"><code class="docutils literal notranslate"><span class="pre">test_find_walks_all_slots_and_reports_missing_tags()</span></code></a></li>
+<li><a class="reference internal" href="#test_design.test_the_package_publishes_its_design"><code class="docutils literal notranslate"><span class="pre">test_the_package_publishes_its_design()</span></code></a></li>
+<li><a class="reference internal" href="#test_design.test_spectrum_controls_map_the_shared_contract"><code class="docutils literal notranslate"><span class="pre">test_spectrum_controls_map_the_shared_contract()</span></code></a></li>
+<li><a class="reference internal" href="#test_design.test_the_conformance_page_uses_native_fallbacks_for_missing_controls"><code class="docutils literal notranslate"><span class="pre">test_the_conformance_page_uses_native_fallbacks_for_missing_controls()</span></code></a></li>
 </ul>
 </li>
 </ul>
