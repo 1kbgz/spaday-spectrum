@@ -1,5 +1,6 @@
 import json
 
+import pytest
 from spaday import Button, Checkbox, TextArea, TextInput, ToggleSwitch, validate
 from spaday.ui import conformance, resolve
 from spaday.ui.design import _plain
@@ -22,6 +23,13 @@ def _find(node: dict, tag: str) -> dict:
                 except LookupError:
                     pass
     raise LookupError(tag)
+
+
+def test_find_walks_all_slots_and_reports_missing_tags():
+    tree = {"tag": "root", "slots": {"first": ["text", {"tag": "other"}], "second": [{"tag": "target"}]}}
+    assert _find(tree, "target")["tag"] == "target"
+    with pytest.raises(LookupError):
+        _find(tree, "missing")
 
 
 def test_the_package_publishes_its_design():
