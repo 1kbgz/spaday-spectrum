@@ -6,6 +6,7 @@ from spaday import ComponentPackage
 from . import button, checkbox, switch, tabs, textfield, theme
 from .button import *
 from .checkbox import *
+from .design import DESIGN
 from .switch import *
 from .tabs import *
 from .textfield import *
@@ -22,4 +23,7 @@ package = ComponentPackage(
     assets=(("js", "cdn/index.js"),),
     components=tuple(getattr(module, name) for module in (button, checkbox, switch, tabs, textfield, theme) for name in module.__all__),
     provides=json.loads(_VERSIONS.read_text(encoding="utf-8")) if _VERSIONS.exists() else {},
+    design=DESIGN,
 )
+
+__all__ = [*(name for module in (button, checkbox, switch, tabs, textfield, theme) for name in module.__all__), "DESIGN", "package"]  # noqa: PLE0604

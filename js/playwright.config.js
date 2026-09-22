@@ -34,6 +34,12 @@ export default defineConfig({
       ? []
       : [
           {
+            command: "python -m spaday.ui.conformance 8030 --package spectrum",
+            url: "http://127.0.0.1:8030",
+            reuseExistingServer: !process.env.CI,
+            timeout: 120 * 1000,
+          },
+          {
             command: "python -m spaday_spectrum.example",
             url: "http://127.0.0.1:8028",
             reuseExistingServer: !process.env.CI,
