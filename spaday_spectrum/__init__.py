@@ -30,6 +30,7 @@ TOKENS = {
     "spectrum_background_layer_2_color": Token("--spectrum-background-layer-2-color", "drives --spa-surface"),
     "spectrum_background_layer_1_color": Token("--spectrum-background-layer-1-color", "drives --spa-surface-2"),
     "spectrum_gray_300": Token("--spectrum-gray-300", "drives --spa-border"),
+    "spectrum_neutral_content_color_default": Token("--spectrum-neutral-content-color-default", "drives --spa-text"),
     "spectrum_neutral_subdued_content_color_default": Token("--spectrum-neutral-subdued-content-color-default", "drives --spa-muted"),
     "spectrum_accent_content_color_default": Token("--spectrum-accent-content-color-default", "drives --spa-accent and --spa-info"),
     "spectrum_positive_visual_color": Token("--spectrum-positive-visual-color", "drives --spa-success"),

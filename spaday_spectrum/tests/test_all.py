@@ -34,6 +34,8 @@ def test_package_drives_bootstrap_asset_url():
 def test_tokens_describe_the_spectrum_palette_passthrough():
     assert all(isinstance(token, Token) for token in TOKENS.values())
     assert TOKENS["spectrum_accent_content_color_default"].property == "--spectrum-accent-content-color-default"
+    css = (ROOT.parent / "js/src/css/index.css").read_text(encoding="utf-8")
+    assert "--spa-text: var(--spectrum-neutral-content-color-default);" in css
 
 
 def test_catalog_declares_every_element_the_bundle_registers():
