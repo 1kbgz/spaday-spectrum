@@ -30,6 +30,7 @@ Attributes
    spaday_spectrum.__version__
    spaday_spectrum._VERSIONS
    spaday_spectrum.package
+   spaday_spectrum.TOKENS
    spaday_spectrum.__all__
 
 
@@ -316,6 +317,8 @@ Package Contents
 .. py:data:: _VERSIONS
 
 .. py:data:: package
+
+.. py:data:: TOKENS
 
 .. py:data:: __all__
 

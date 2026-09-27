@@ -201,8 +201,8 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../../index.html">API Reference</a><input aria-label="Toggle navigation of API Reference" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../test_all/index.html">test_all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../test_design/index.html">test_design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../test_example/index.html">test_example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../test_gallery/index.html">test_gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../test_example/index.html">test_example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../test_versions/index.html">test_versions</a></li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="../index.html">spaday_spectrum</a><input aria-label="Toggle navigation of spaday_spectrum" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../button/index.html">spaday_spectrum.button</a></li>
@@ -614,16 +614,10 @@ validated to form a valid model.</p>
 <dd><details><summary>Show Value</summary><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">"""</span>
 <span class="sd">&lt;style&gt;</span>
 <span class="sd">  body { margin: 0; }</span>
-<span class="sd">  /* spaday-spectrum ships no mapping of spaday's shell palette yet, so the page maps it onto Spectrum's</span>
-<span class="sd">     tokens here, inside the theme that defines them */</span>
 <span class="sd">  sp-theme { display: block; min-height: 100vh; font-family: var(--spectrum-sans-font-family-stack, system-ui);</span>
 <span class="sd">    color: var(--spectrum-neutral-content-color-default);</span>
 <span class="sd">    background: radial-gradient(circle at 10% 0, color-mix(in srgb, var(--spectrum-accent-color-900) 13%, transparent), transparent 32rem),</span>
-<span class="sd">      var(--spectrum-background-layer-1-color);</span>
-<span class="sd">    --spa-surface: var(--spectrum-background-layer-2-color); --spa-surface-2: var(--spectrum-background-layer-1-color);</span>
-<span class="sd">    --spa-border: var(--spectrum-gray-300); --spa-muted: var(--spectrum-neutral-subdued-content-color-default);</span>
-<span class="sd">    --spa-accent: var(--spectrum-accent-content-color-default); --spa-success: var(--spectrum-positive-visual-color);</span>
-<span class="sd">    --spa-warning: var(--spectrum-notice-visual-color); --spa-danger: var(--spectrum-negative-visual-color); }</span>
+<span class="sd">      var(--spectrum-background-layer-1-color); }</span>
 <span class="sd">  spa-nav { justify-content: space-between; border-bottom: 1px solid var(--spa-border);</span>
 <span class="sd">    background: color-mix(in srgb, var(--spa-surface) 88%, transparent); backdrop-filter: blur(14px); }</span>
 <span class="sd">  /* a tab panel lays out its content as a flex row */</span>

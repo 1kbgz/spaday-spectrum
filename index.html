@@ -201,8 +201,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="autoapi/index.html">API Reference</a><input aria-label="Toggle navigation of API Reference" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/test_all/index.html">test_all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/test_design/index.html">test_design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autoapi/test_example/index.html">test_example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/test_gallery/index.html">test_gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/test_example/index.html">test_example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/test_versions/index.html">test_versions</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="autoapi/spaday_spectrum/index.html">spaday_spectrum</a><input aria-label="Toggle navigation of spaday_spectrum" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/spaday_spectrum/button/index.html">spaday_spectrum.button</a></li>
@@ -298,6 +298,19 @@ switch as Spectrum elements:</p>
 </div>
 <p>Controls outside this focused Spectrum package use spaday’s marked native fallback. The package’s
 shared conformance test covers both the Spectrum controls and those substitutions.</p>
+</section>
+<section id="theming">
+<h1>Theming<a class="headerlink" href="#theming" title="Link to this heading">¶</a></h1>
+<p>Spectrum’s palette drives the Spaday shell inside <code class="docutils literal notranslate"><span class="pre">sp-theme</span></code>. Override a Spectrum token on the theme
+or app root and shell components inherit the same value:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spaday</span><span class="w"> </span><span class="kn">import</span> <span class="n">App</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spaday_spectrum</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpTheme</span>
+
+<span class="n">SpTheme</span><span class="p">(</span><span class="n">App</span><span class="p">(</span><span class="o">...</span><span class="p">))</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="n">spectrum_accent_content_color_default</span><span class="o">=</span><span class="s2">"#0C4253"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">spaday_spectrum.TOKENS</span></code> lists the Spectrum properties connected to <code class="docutils literal notranslate"><span class="pre">--spa-surface</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--spa-border</span></code>, <code class="docutils literal notranslate"><span class="pre">--spa-accent</span></code>, and the shell status colors.</p>
 </section>
 <section id="interactive-example">
 <h1>Interactive example<a class="headerlink" href="#interactive-example" title="Link to this heading">¶</a></h1>

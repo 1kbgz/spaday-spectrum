@@ -20,6 +20,7 @@ Functions
 
    test_all.test_representative_spectrum_components_serialize
    test_all.test_package_drives_bootstrap_asset_url
+   test_all.test_tokens_describe_the_spectrum_palette_passthrough
    test_all.test_catalog_declares_every_element_the_bundle_registers
    test_all.test_catalog_carries_what_other_spectrum_packages_contribute
    test_all.test_generated_catalog_is_current
@@ -37,6 +38,8 @@ Module Contents
 .. py:function:: test_representative_spectrum_components_serialize()
 
 .. py:function:: test_package_drives_bootstrap_asset_url()
+
+.. py:function:: test_tokens_describe_the_spectrum_palette_passthrough()
 
 .. py:function:: test_catalog_declares_every_element_the_bundle_registers()
 
