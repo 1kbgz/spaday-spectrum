@@ -311,16 +311,10 @@ page = (
 styles = """
 <style>
   body { margin: 0; }
-  /* spaday-spectrum ships no mapping of spaday's shell palette yet, so the page maps it onto Spectrum's
-     tokens here, inside the theme that defines them */
   sp-theme { display: block; min-height: 100vh; font-family: var(--spectrum-sans-font-family-stack, system-ui);
     color: var(--spectrum-neutral-content-color-default);
     background: radial-gradient(circle at 10% 0, color-mix(in srgb, var(--spectrum-accent-color-900) 13%, transparent), transparent 32rem),
-      var(--spectrum-background-layer-1-color);
-    --spa-surface: var(--spectrum-background-layer-2-color); --spa-surface-2: var(--spectrum-background-layer-1-color);
-    --spa-border: var(--spectrum-gray-300); --spa-muted: var(--spectrum-neutral-subdued-content-color-default);
-    --spa-accent: var(--spectrum-accent-content-color-default); --spa-success: var(--spectrum-positive-visual-color);
-    --spa-warning: var(--spectrum-notice-visual-color); --spa-danger: var(--spectrum-negative-visual-color); }
+      var(--spectrum-background-layer-1-color); }
   spa-nav { justify-content: space-between; border-bottom: 1px solid var(--spa-border);
     background: color-mix(in srgb, var(--spa-surface) 88%, transparent); backdrop-filter: blur(14px); }
   /* a tab panel lays out its content as a flex row */

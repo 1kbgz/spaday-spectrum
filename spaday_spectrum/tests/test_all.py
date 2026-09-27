@@ -3,10 +3,10 @@ import re
 from pathlib import Path
 
 import pytest
-from spaday import generate
+from spaday import Token, generate
 from spaday.bootstrap import bootstrap
 
-from spaday_spectrum import SpButton, SpCheckbox, SpSwitch, SpTab, SpTabPanel, SpTabs, SpTextfield, SpTheme, package
+from spaday_spectrum import TOKENS, SpButton, SpCheckbox, SpSwitch, SpTab, SpTabPanel, SpTabs, SpTextfield, SpTheme, package
 
 ROOT = Path(__file__).parent.parent
 CATALOG = ("button", "checkbox", "switch", "tabs", "textfield", "theme")
@@ -26,7 +26,14 @@ def test_representative_spectrum_components_serialize():
 
 def test_package_drives_bootstrap_asset_url():
     assert package.name == "spectrum"
-    assert 'src="/components/spectrum/cdn/index.js"' in bootstrap(packages=[package])
+    html = bootstrap(packages=[package])
+    assert 'href="/components/spectrum/css/index.css"' in html
+    assert 'src="/components/spectrum/cdn/index.js"' in html
+
+
+def test_tokens_describe_the_spectrum_palette_passthrough():
+    assert all(isinstance(token, Token) for token in TOKENS.values())
+    assert TOKENS["spectrum_accent_content_color_default"].property == "--spectrum-accent-content-color-default"
 
 
 def test_catalog_declares_every_element_the_bundle_registers():
