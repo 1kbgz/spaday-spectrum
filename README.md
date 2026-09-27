@@ -44,6 +44,21 @@ app = serve(page, packages=["spectrum"], design="spectrum", store={"name": ""})
 Controls outside this focused Spectrum package use spaday's marked native fallback. The package's
 shared conformance test covers both the Spectrum controls and those substitutions.
 
+## Theming
+
+Spectrum's palette drives the Spaday shell inside `sp-theme`. Override a Spectrum token on the theme
+or app root and shell components inherit the same value:
+
+```python
+from spaday import App
+from spaday_spectrum import SpTheme
+
+SpTheme(App(...)).css(spectrum_accent_content_color_default="#0C4253")
+```
+
+`spaday_spectrum.TOKENS` lists the Spectrum properties connected to `--spa-surface`,
+`--spa-border`, `--spa-accent`, and the shell status colors.
+
 ## Interactive example
 
 The textfield updates the greeting immediately, the checkbox switches Spectrum themes, and the button

@@ -19,6 +19,23 @@ test("registers the first Spectrum component slice with a theme", async ({
   await expect(page.locator("sp-theme")).toHaveJSProperty("color", "light");
 });
 
+test("passes Spectrum palette tokens through to the Spaday shell", async ({
+  page,
+}) => {
+  await page.goto("/dist/index.html");
+  const color = await page.evaluate(() => {
+    document.body.innerHTML = `
+      <sp-theme color="light" scale="medium">
+        <spa-app style="--spectrum-accent-content-color-default: rgb(12, 34, 56)">
+          <span id="probe" style="color: var(--spa-accent)">Probe</span>
+        </spa-app>
+      </sp-theme>`;
+    const probe = document.querySelector("#probe");
+    return getComputedStyle(probe).color;
+  });
+  expect(color).toBe("rgb(12, 34, 56)");
+});
+
 test("warns, naming what it serves, when another copy registered its elements first", async ({
   page,
 }) => {
