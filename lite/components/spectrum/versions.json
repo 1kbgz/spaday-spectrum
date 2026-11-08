@@ -1,8 +1,8 @@
 {
-  "@spectrum-web-components/button": "1.12.2",
-  "@spectrum-web-components/checkbox": "1.12.2",
-  "@spectrum-web-components/switch": "1.12.2",
-  "@spectrum-web-components/tabs": "1.12.2",
-  "@spectrum-web-components/textfield": "1.12.2",
-  "@spectrum-web-components/theme": "1.12.2"
+  "@spectrum-web-components/button": "1.12.5",
+  "@spectrum-web-components/checkbox": "1.12.5",
+  "@spectrum-web-components/switch": "1.12.5",
+  "@spectrum-web-components/tabs": "1.12.5",
+  "@spectrum-web-components/textfield": "1.12.5",
+  "@spectrum-web-components/theme": "1.12.5"
 }
