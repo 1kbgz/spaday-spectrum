@@ -53,7 +53,7 @@ develop = [
     "hatchling",
     "httpx",
     "mdformat",
-    "mdformat-frontmatter",
+    "mdformat-myst",
     "mdformat-tables>=1",
     "pydantic>=2",
     "pytest",
